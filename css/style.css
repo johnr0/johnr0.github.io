@@ -1,0 +1,126 @@
+﻿/* {
+    border-style : solid;
+    border-color : rgba(0,0,0,0.3);
+    
+}*/
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+div{
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+#banner_and_content {
+
+    float: right;
+    height: 100%;
+    display: inline-block;
+ 
+    box-sizing: border-box;
+    margin: 0px;
+    width: 75%;
+    padding-right: 20px;
+
+}
+
+#sidebar {
+    float: left;
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+
+    margin: 0px;
+
+}
+
+#banner {
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu_item {
+    padding-left: 5px;
+    padding-up: 20px;
+    font-family: "Cinzel";
+}
+
+#menu_head{
+    padding-left: 5px;
+    padding-top: 50px;
+    font-family: "Raleway";
+    letter-spacing: 0.6em;
+}
+
+.post_head {
+    font-family: "Raleway";
+    font-size: 30px;
+}
+
+#Born {
+    background-repeat: no-repeat;
+    background-image: url(../images/michigan.jpg);
+    background-size: contain;
+    background-position: center center;
+}
+
+#Moved {
+    background-image:url(../images/rok.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#Nirvana {
+    background-image:url(../images/nirvana93.jpg);
+
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-y:top;
+    color: white;
+}
+
+#NC {
+    background-image:url(../images/nc.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#myeongji {
+    background-image:url(../images/myeongji.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+}
+
+#snu{
+    background-image:url(../images/snu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+}
+
+.content_box {
+    border : solid;
+    border-color: rgba(255,255,255,0);
+    max-width : 800px;
+}
+
+.text {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Slabo 27px";
+}
+
+.midpoint {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Cinzel";
+}
