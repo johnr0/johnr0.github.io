@@ -1,3 +1,0 @@
-## Messing around with initialization!
-
-It might take some time to get used to it....

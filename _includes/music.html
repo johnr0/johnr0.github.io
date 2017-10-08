@@ -1,0 +1,43 @@
+<div class="page__inner-wrap">
+  {% unless page.header.overlay_color or page.header.overlay_image %}
+    <header>
+      {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+    </header>
+  {% endunless %}
+    <h2 class="page__title" itemprop="headline">Officially Released</h2>
+  {% for music in site.categories.music_released %}
+  <div class="row">
+    <div class="col-xs-4">
+      <div style="margin-top : 20px">
+      {% if music.video %}
+        {% include video id=music.video provider="youtube" %}
+      {% elsif music.soundcloud %}
+        {% include video id=music.soundcloud provider="soundcloud" %}
+      {% endif %}
+    </div>
+    </div>
+    <div class="col-xs-8">
+      <h2 class="archive_item-title">{{music.title}}</h2>
+      <p>{{music.content}}</p>
+    </div>
+  </div>
+  {% endfor %}
+  <h2 class="page__title" itemprop="headline">Demos</h2>
+  {% for music in site.categories.music %}
+  <div class="row">
+    <div class="col-xs-4">
+      <div style="margin-top : 20px">
+      {% if music.video %}
+        {% include video id=music.video provider="youtube" %}
+      {% elsif music.soundcloud %}
+        {% include video id=music.soundcloud provider="soundcloud" %}
+      {% endif %}
+    </div>
+    </div>
+    <div class="col-xs-8">
+      <h2 class="archive_item-title">{{music.title}}</h2>
+      <p>{{music.content}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

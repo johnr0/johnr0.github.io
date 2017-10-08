@@ -1,0 +1,30 @@
+---
+layout: archive
+---
+
+<h3 class="archive__subtitle"><a href="{{domain}}/research/">Current Research</a></h3>
+
+{% for research in site.categories.research %}
+<div class="row">
+<div class="col-xs-2">
+  <img src="{{"/assets/image/research/"}}{{research.img}}" style="margin-top:10px"/>
+</div>
+
+<div class="col-xs-10">
+  <h4 class="archive_item-title"><a href="{{domain}}/research/">{{research.title}}</a></h4>
+</div>
+</div>
+{% endfor %}
+<h3 class="archive__subtitle">Currently developing Game</h3>
+
+{% for game in site.categories.game limit: 1 %}
+<div class="row">
+<div class="col-xs-2">
+  <img src="{{"/assets/image/game/"}}{{game.img}}" style="margin-top:10px"/>
+</div>
+
+<div class="col-xs-10">
+  <h4 class="archive_item-title"><a href="{{domain}}/game/{{game.title}}">{{game.title}}</a></h4>
+</div>
+</div>
+{% endfor %}

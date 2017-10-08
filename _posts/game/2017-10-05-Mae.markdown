@@ -1,0 +1,19 @@
+---
+title: "Mae"
+layout: game_single
+categories:
+  - game
+tags:
+  - game, puzzle, 2D, rhythm
+img: 2016-mae.png
+video: pedu3w4pmTo
+---
+Mae is a top-down rhythm inspired puzzle game. It is a game with story of Prometeus stealing Mae, which is source of knowledge and civilization, from Gods to give it to mankind. By interacting with objects, you will avoid obstacles, and reach the goal in the end.
+
+Co-developed with Road Ends team members, JaeHeung Han, Jihye Kim, JungGun Ahn, Yun Seo, and Jaeho Lee, and started as course project which is taught by Prof JungYup Lee.
+
+Selected at Busan Indie Connect 2016.
+
+Awarded special award at Anyang Super Rookie Festival 2016.
+
+Currently deprecated project.

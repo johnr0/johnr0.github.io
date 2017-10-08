@@ -1,0 +1,19 @@
+<div class="page__inner-wrap">
+  {% unless page.header.overlay_color or page.header.overlay_image %}
+    <header>
+      {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+    </header>
+  {% endunless %}
+  {% for research in site.categories.research limit:include.limit %}
+  <div class="row">
+    <div class="col-xs-4">
+      <img src="{{"/assets/image/research/"}}{{research.img}}" style="margin-top:20px"/>
+    </div>
+
+    <div class="col-xs-8">
+      <h2 class="archive_item-title">{{research.title}}</h2>
+      <p>{{research.content}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

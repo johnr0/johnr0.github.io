@@ -1,0 +1,10 @@
+# main links
+main:
+   - title: "HCI Research"
+     url: /research/
+   - title: "Game"
+     url: /game/
+   - title: "Music"
+     url: /music/
+  # - title: "Sitemap"
+  #   url: /sitemap/

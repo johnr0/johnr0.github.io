@@ -1,0 +1,10 @@
+---
+title: "Cloudwalker"
+categories:
+  - music
+official: demo
+soundcloud: 72585397
+---
+Liberalia // Vocal : Jaewoong Kim / Guitar : John Joon Young Chung / Guitar : Seunghyun Son / Bass : Joonyoung Jang / Drum : Chaewon Lee
+
+Composed by John Joon Young Chung

@@ -1,0 +1,17 @@
+---
+title: "Surplus"
+layout: game_single
+categories:
+  - game
+tags:
+  - game, puzzle, 3D, animals
+img: 2017-surplus.png
+video: Oedg8C4HsyM
+---
+The goal of SURPLUS is to evacuate duckling from a dangerous meat factory. The duckling gets around the factory on its own will, and the player can only give guidance to it with 'interactive interface'. However, the range of leading ducking with this interface is limited, and there are plenty of hazardous elements throughout the factory. The player has an ability to hack into manufacturing systems, and using this ability, the player should guide duckling to safe zone by avoiding dangers.
+
+Being co-developed with Indooors Games team members, JaeHeung Han, and Jihye Kim. Thanks for discussions and advices from JungGun Ahn of LoadComplete and Prof JungYup Lee.
+
+Targeted to be released in mid 2018.
+
+Selected at Busan Indie Connect 2017.

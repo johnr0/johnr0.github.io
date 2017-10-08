@@ -1,0 +1,14 @@
+---
+title: "Epilepsy"
+layout: game_single
+categories:
+  - game
+tags:
+  - game, horror, 3D
+img: 2016-epilepsy.jpg
+---
+Epilepsy is a horror game that seeks the reason why a girl is left alone in the world which changed drastically into a hell. The girl tries to go to the town from the isolated home, to find her brother. However, what welcomes her is monsters and ghosts that has been never seen before. She tried to find her brother, and the secret behind all things happened in the world is revealed.
+
+Co-developed with JungGun Ahn, Yun Seo, Sangwon Park, Chaewon Kang, and Ingon Kim, and started as course project which is taught by Prof Soojeong Bae of LoadComplete.
+
+Awarded 2nd Prize and Popularity Prize at Information Science and Culture Project Exhibition Awards of Seoul National University.
