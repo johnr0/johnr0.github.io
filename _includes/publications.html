@@ -1,0 +1,30 @@
+<div class="page__inner-wrap">
+  {% unless page.header.overlay_color or page.header.overlay_image %}
+    <header>
+      {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+    </header>
+  {% endunless %}
+  {% for publication in site.categories.publications %}
+  <div class="row">
+    <div class="col-xs-12">
+      <h4 class="archive_item-title">
+        {% if publication.link %}
+        <a href="{{publication.link}}">{{publication.title}}</a>
+        {% elsif publication.pdf %}
+          <a href="{{"/assets/publications/"}}{{publication.pdf}}">{{publication.title}}</a>
+        {% else %}{{publication.title}}{% endif %}
+      </h4>
+      <p>{{publication.authors}}</p>
+      <p><div>
+        <i>{{publication.venue}}</i>
+        {% if publication.awards %}
+        <div style="background-color: #ffffaa; float: right; display: inline; margin-left:10px">{{publication.awards}}</div>
+        {% endif %}
+        {% if publication.video %}
+        <a href="{{publication.video}}" style="float:right">video</a>
+        {% endif %}
+      </div></p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

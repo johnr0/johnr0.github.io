@@ -1,7 +1,9 @@
 # main links
 main:
-   - title: "HCI Research"
+   - title: "Current Research"
      url: /research/
+   - title: "Publications"
+     url: /publications/
    - title: "Game"
      url: /game/
    - title: "Music"
