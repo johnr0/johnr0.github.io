@@ -1,5 +1,5 @@
 ---
-title: "Annotating Emotion and Intention of the Video"
+title: "Crowdsourcing interpretative labels from the Video"
 categories:
   - research
 layout: single
@@ -7,4 +7,4 @@ tags:
   - crowdsourcing, video
 img: 2018-video-annotate.png
 ---
-There is growing interest in intelligent systems, and the system that understands emotion and intention of the user is yet to be achieved. However, establishing such a system is difficult due to lack of labeled data which the system can train on. Microtask-based crowdsourcing has been a scalable way to gather annotation on data, however, when applying crowdsourcing to annotating videos, there is a problem that the overall context in videos can disappear by segmenting them into microtask. We research on ways to conveying the overall context of the video to each workers while segmenting tasks into pieces, with workflows that mixes top-down and bottom-up approach and embedding of machine computation in workflows.
+Even though the expectation for human-understanding computational systems is ever increasing, yet a lot of challenges lie ahead. The interpretative capability of computational systems is one of the goals that are hard to be achieved, and one reason is the absence of the datasets that contain possible interpretations on labels. Rather, previous datasets more focused on labels with a clear answer or ignored variability in interpretation, which led to computational systems that are inaccurate and inflexible. We question the ways to leverage crowd workers to retrieve various interpretative labels and the ways to structure them when labeling human emotions and intentions from the video dataset. As a result of the project, we aim to build video datasets that contain rich and structured labels with crowd workers, which can be utilized to train models that can interpret human emotions and intentions.
