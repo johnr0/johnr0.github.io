@@ -1,5 +1,5 @@
 ---
-title: "Crowdsourcing interpretative labels from the Video"
+title: "Crowdsourcing Interpretative Labels from the Video"
 categories:
   - research
 layout: single
