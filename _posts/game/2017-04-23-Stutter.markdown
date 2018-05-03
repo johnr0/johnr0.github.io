@@ -1,0 +1,17 @@
+---
+title: "Stutter"
+layout: game_single
+categories:
+  - game
+tags:
+  - game, FPS, Text-game, Narrative
+img: 2018-stutter.png
+link: https://ldjam.com/events/ludum-dare/41/stutter
+---
+Inside of a brain of a boy who stutter, you experience the boy’s tragic, yet hopeful school life.
+
+While feeling the boy’s emotion from the closest perspective, you help him say words, by shooting words he wants to say.
+
+This game is the mixture of a simple FPS and an text-based adventure, which makes you sympathize with the boy, and help him through struggles.
+
+Co-developed with my friends, JaeHeung Han, Jihye Kim from LoadComplete, and JungGun Ahn also from LoadComplete as a Ludum Dare Game Jam project. Developed in three days.

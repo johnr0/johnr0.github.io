@@ -30,6 +30,8 @@ layout: default
           <img src="{{"/assets/image/game/"}}{{page.img}}" style="margin-top:20px"/>
         </div>
         {% endif %}
+        {% if page.link %}
+        <a href="{{page.link}}">Link to the game</a>
         {{ content }}
         {% if page.video %}<div>
           {% include video id=page.video provider="youtube" %}
