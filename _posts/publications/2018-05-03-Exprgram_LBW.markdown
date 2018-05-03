@@ -1,11 +1,10 @@
 ---
-title: "Exprgram: A Video-based Language Learning Interface Powered by Learnersourced Video Annotations"
+title: "Exprgram: A Language Learning Interface for Mastering Pragmatic Competence"
 categories: publications
-link : https://groupsight.github.io/media/Exprgram_GroupSight2017.pdf
+pdf : CHI2018-LBW-Exprgram.pdf
 authors: Kyungje Jo, John Joon Young Chung, Juho Kim
-venue : HCOMP 2017 Workshop on Human Computation for Image and Video Analysis
-awards : Best Paper Runner-up
-video : https://www.youtube.com/watch?v=J0Y9tzJ-8xY
+venue : CHI2018
+video : https://www.youtube.com/watch?v=aiQct1hIy-w
 tags:
   - crowdsourcing, learnersourcing, language learning
 ---
