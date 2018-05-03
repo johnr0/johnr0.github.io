@@ -5,7 +5,7 @@ categories:
   - game
 tags:
   - game, FPS, Text-game, Narrative
-img: 2018-stutter.png
+img: 2018-stutter.jpg
 link: https://ldjam.com/events/ludum-dare/41/stutter
 ---
 Inside of a brain of a boy who stutter, you experience the boy’s tragic, yet hopeful school life.
