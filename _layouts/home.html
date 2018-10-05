@@ -46,7 +46,7 @@ I showcase some of the results from my free-time-activities. You can check some 
 <h3 class="archive__subtitle"><a href="{{domain}}/research/">Current Research</a></h3>
 
 {% for research in site.categories.research %}
-{% if research.done=="notdone" %}
+{% if research.done is "notdone" %}
 <div class="row">
 <div class="col-xs-2">
   <img src="{{"/assets/image/research/"}}{{research.img}}" style="margin-top:10px"/>

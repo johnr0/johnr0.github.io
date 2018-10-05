@@ -5,7 +5,7 @@
     </header>
   {% endunless %}
   {% for research in site.categories.research limit:include.limit %}
-  {% if research.done =="notdone" %}
+  {% if research.done is "notdone" %}
   <div class="row">
     <div class="col-xs-4">
       <img src="{{"/assets/image/research/"}}{{research.img}}" style="margin-top:20px"/>
@@ -16,6 +16,6 @@
       <p>{{research.content}}</p>
     </div>
   </div>
-  {% endif %
+  {% endif %}
   {% endfor %}
 </div>
