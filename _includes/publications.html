@@ -21,14 +21,14 @@
         <div style="background-color: #ffffaa; float: right; display: inline; margin-left:10px">{{publication.awards}}</div>
         {% endif %}
         {% if publication.bibtex %}
-        <a class="btn" href="javascript:;" onClick="
+        <a class="btn" style="float:right;" href="javascript:;" onClick="
           if (document.getElementById('{{publication.title}}_bib').style.display == 'block') {
             document.getElementById('{{publication.title}}_bib').style.display='none';
           } else {
             document.getElementById('{{publication.title}}_bib').style.display='block';
           }
         ">
-        <span style="font-size:large;">BibTeX</span>
+        BibTeX
         </a>
       
         {% endif %}
