@@ -21,7 +21,7 @@
         <div style="background-color: #ffffaa; float: right; display: inline; margin-left:10px">{{publication.awards}}</div>
         {% endif %}
         {% if publication.bibtex %}
-        <a class="btn" style="float:right;" href="javascript:;" onClick="
+        <a style="float:right; margin-left: 10px" href="javascript:;" onClick="
           if (document.getElementById('{{publication.title}}_bib').style.display == 'block') {
             document.getElementById('{{publication.title}}_bib').style.display='none';
           } else {

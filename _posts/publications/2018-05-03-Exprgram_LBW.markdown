@@ -5,7 +5,7 @@ pdf : CHI2018-LBW-Exprgram.pdf
 authors: Kyungje Jo, John Joon Young Chung, Juho Kim
 venue : CHI2018 Extended Abstract
 video : https://www.youtube.com/watch?v=aiQct1hIy-w
-bibtex: "@inproceedings{Jo:2018:ELL:3170427.3188582,
+bibtex: "@inproceedings{JoCHI2018Exprgram,
 author = {Kyung Je Jo,  John J.Y. Chung and Juho Kim},
  title = {Exprgram: A Language Learning Interface for Mastering Pragmatic Competence},
  booktitle = {Extended Abstracts of the 2018 CHI Conference on Human Factors in Computing Systems},
