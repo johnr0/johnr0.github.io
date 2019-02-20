@@ -20,9 +20,22 @@
         {% if publication.awards %}
         <div style="background-color: #ffffaa; float: right; display: inline; margin-left:10px">{{publication.awards}}</div>
         {% endif %}
+        {% if publication.bibtex %}
+        <a class="btn" href="javascript:;" onClick="
+          if (document.getElementById('{{publication.title}}_bib').style.display == 'block') {
+            document.getElementById('{{publication.title}}_bib').style.display='none';
+          } else {
+            document.getElementById('{{publication.title}}_bib').style.display='block';
+          }
+        ">
+        <span style="font-size:large;">BibTeX</span>
+        </a>
+      
+        {% endif %}
         {% if publication.video %}
         <a href="{{publication.video}}" style="float:right">video</a>
         {% endif %}
+        <p id="{{publication.title}}_bib" style="display:none">{{publication.bibtex}}</p>
       </div></p>
     </div>
   </div>
