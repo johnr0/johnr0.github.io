@@ -1,7 +1,7 @@
 ---
 title: "Retrieving Collective Distribution of Crowd Annotation by Deliberative Estimation on How Others Would Annotate"
 categories:
-  - research
+  - none
 layout: single
 tags:
   - crowdsourcing, video
