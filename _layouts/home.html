@@ -3,44 +3,18 @@ layout: archive
 ---
 
 <h3>HCI Researcher</h3>
-<p>I am John Joon Young Chung, a first-year Ph.D. student focusing on HCI, crowdsourcing, and collaboration at scale. 
-  Crowdsourcing and online collaboration have a potential to solve many difficult problems with diversity in online crowds, 
-  but how to leverage the diversity in the computing system is more to be explored. 
-  I believe that diversity can be leveraged to solve problems that are ambiguous, subjective, and uncertain. 
-  However, how can we manage diverging crowds to solve the problem efficiently, without suffering polarization or early convergence? 
-  How should we deal with crowds if they come up with diverse valid solutions? 
-  There are more and more questions to be answered on how to fully leverage crowd diversity, and I am trying to answer those questions.
+<p>I am John Joon Young Chung, a first-year Ph.D. student at <a href="https://web.eecs.umich.edu/~wlasecki/croma.html">CROMA Lab</a>, University of Michigan, working with Professor <a href="https://web.eecs.umich.edu/~wlasecki/">Walter Lasecki</a>. 
+ My research area is focused on HCI, crowdsourcing, collaboration at scale, and AI. 
+ I am interested in ways to leverage uncertain inputs from humans in the computing system. 
+ For example, what is the optimal way to use estimation or prediction from humans to help AI better solve problems?
+ How can we leverage them to make people better collaboratively learn?
+ Problem domains that I am interested in include autonomous vehicles, human learning, creativity, online discussion, etc.
 </p>
+
+<h3>Music, Pixel Arts, and Games</h3>
 <p>
-    In the context of crowdsourcing and social computing, 
-    I try to investigate how we should design interactive computing systems in order to fully leverage the diversity of crowds. 
-    Right now, I am focusing on efficient crowdsourcing techniques that can fully leverage diversity. 
-    Specifically, now I am working on crowdsourcing projects:
-</p>
-<ol>
-  <li>
-      How to efficiently retrieve collective perception of crowds in data annotation with a smaller number of crowds, by making them deliberate on the estimation of how others would annotate.
-  </li>
-  <li>
-      Solving problems with uncertainty in real-time with efficient collective deliberation process, in the context of the car accident prediction. 
-  </li>
-</ol>
-<p>
-    Though not yet working on a specific project, I am also interested in the domain of civic discussion, 
-    regarding how to build a system that can make people better convey their diverse thoughts and make them better listen to others.
-</p>
-<p>
-    I am a Ph.D. student at <a href="https://web.eecs.umich.edu/~wlasecki/croma.html">CROMA Lab</a>, University of Michigan, working with Professor <a href="https://web.eecs.umich.edu/~wlasecki/">Walter Lasecki</a>. 
-    I am also collaborating with Professor <a href="https://juhokim.com/">Juho Kim</a> at <a href="https://kixlab.org">KIXLAB</a>, KAIST. 
-</p>
-<h3>Game Developer and Musician</h3>
-<p>
-I used to enjoy video games, ranging from AAA games to experimental indie games, and also prototype some simple games with my friends. 
-I learned how users interact with a computer through prototyping experiences and how to collaborate with people, sharing and managing ideas.
-When I was undergraduate, I used to listen and compose really heavy but melodic tunes.
-</p>
-<p>
-I showcase some of the results from my free-time-activities. You can check some of the descriptions, or videos of games I prototyped in <a href="{{domain}}/game/">Game</a>, and I posted tunes I composed in <a href="{{domain}}/music/">Music</a>.
+In my free time, I play guitar and compose <a href="{{domain}}/music/">some tunes</a>. Recently, I started drawing pixel arts.
+I used to enjoy video games, ranging from AAA games to experimental indie games, and also prototyped <a href="{{domain}}/game/">some games</a> with my friends. 
 </p>
 
 <h3 class="archive__subtitle"><a href="{{domain}}/research/">Current Research</a></h3>
@@ -53,19 +27,6 @@ I showcase some of the results from my free-time-activities. You can check some 
 
 <div class="col-xs-10">
   <h4 class="archive_item-title"><a href="{{domain}}/research/">{{research.title}}</a></h4>
-</div>
-</div>
-{% endfor %}
-<h3 class="archive__subtitle">Recently developed Game</h3>
-
-{% for game in site.categories.game limit: 1 %}
-<div class="row">
-<div class="col-xs-2">
-  <img src="{{"/assets/image/game/"}}{{game.img}}" style="margin-top:10px"/>
-</div>
-
-<div class="col-xs-10">
-  <h4 class="archive_item-title"><a href="{{domain}}/game/{{game.title}}">{{game.title}}</a></h4>
 </div>
 </div>
 {% endfor %}
