@@ -1,5 +1,5 @@
 ---
-title: "Facilitating Deliberation with Real-time Crowd Workers For Better Prediction on Car Accident"
+title: "Toward Instantaneous Crowdsourcing in the Wild with Crowd Prediction"
 categories:
   - research
 layout: single
