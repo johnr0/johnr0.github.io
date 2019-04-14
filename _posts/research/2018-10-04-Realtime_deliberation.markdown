@@ -1,5 +1,5 @@
 ---
-title: "Toward Instantaneous Crowdsourcing in the Wild with Crowd Prediction"
+title: "Towards Instantaneous Crowdsourcing in the Wild with Crowd Prediction"
 categories:
   - research
 layout: single
