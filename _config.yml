@@ -85,8 +85,8 @@ analytics:
 author:
   name             : "John Joon Young Chung"
   avatar           : "/assets/image/john.jpg"
-  bio              : "HCI researcher @CromaLab, University of Michigan. Crowdsourcing. Game. Rock Metal Hardcore."
-  location         : "Daejeon"
+  bio              : "HCI researcher @CromaLab, University of Michigan. Crowdsourcing. Game. Music. Pixel Arts."
+  location         : "Ann Arbor, MI"
   email            : 'jjyc@umich.edu'
   uri              :
   bitbucket        :
@@ -107,7 +107,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "https://twitter.com/roadendsgame"
   vine             :
   weibo            :
   xing             :
