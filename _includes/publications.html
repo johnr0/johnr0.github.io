@@ -4,8 +4,49 @@
       {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
     </header>
   {% endunless %}
+  <h3>Full paper</h3>
   {% for publication in site.categories.publications %}
   {% if publication.type=='full' %}
+  <div class="row">
+    <div class="col-xs-12">
+      <h4 class="archive_item-title">
+        
+        {% if publication.link %}
+        <a href="{{publication.link}}">{{publication.title}}</a>
+        {% elsif publication.pdf %}
+          <a href="{{"/assets/publications/"}}{{publication.pdf}}">{{publication.title}}</a>
+        {% else %}{{publication.title}}{% endif %}
+      </h4>
+      <p>{{publication.authors}}</p>
+      <p><div>
+        <i>{{publication.venue}}</i>
+        {% if publication.awards %}
+        <div style="background-color: #ffffaa; float: right; display: inline; margin-left:10px">{{publication.awards}}</div>
+        {% endif %}
+        {% if publication.bibtex %}
+        <a style="float:right; margin-left: 10px" href="javascript:;" onClick="
+          if (document.getElementById('{{publication.title}}_bib').style.display == 'block') {
+            document.getElementById('{{publication.title}}_bib').style.display='none';
+          } else {
+            document.getElementById('{{publication.title}}_bib').style.display='block';
+          }
+        ">
+        BibTeX
+        </a>
+      
+        {% endif %}
+        {% if publication.video %}
+        <a href="{{publication.video}}" style="float:right">video</a>
+        {% endif %}
+        <p id="{{publication.title}}_bib" style="display:none; background-color: #eeeeee; padding: 10px; border-radius:10px;">{{publication.bibtex}}</p>
+      </div></p>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <h3>Poster and Workshop</h3>
+  {% for publication in site.categories.publications %}
+  {% if publication.type!='full' %}
   <div class="row">
     <div class="col-xs-12">
       <h4 class="archive_item-title">
