@@ -6,6 +6,7 @@ authors: Kyungje Jo, John Joon Young Chung, Juho Kim
 venue : HCOMP 2017 Workshop on Human Computation for Image and Video Analysis
 awards : Best Paper Runner-up
 video : https://www.youtube.com/watch?v=J0Y9tzJ-8xY
+type : workshop
 tags:
   - crowdsourcing, learnersourcing, language learning
 ---

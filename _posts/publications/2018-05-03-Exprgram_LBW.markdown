@@ -4,6 +4,7 @@ categories: publications
 pdf : CHI2018-LBW-Exprgram.pdf
 authors: Kyungje Jo, John Joon Young Chung, Juho Kim
 venue : CHI2018 Extended Abstract
+type : poster
 video : https://www.youtube.com/watch?v=aiQct1hIy-w
 bibtex: "@inproceedings{JoCHI2018Exprgram,\n
 author = {Kyung Je Jo,  John J.Y. Chung and Juho Kim},

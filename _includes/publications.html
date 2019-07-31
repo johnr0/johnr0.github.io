@@ -5,9 +5,11 @@
     </header>
   {% endunless %}
   {% for publication in site.categories.publications %}
+  {% if publication.type=='full' %}
   <div class="row">
     <div class="col-xs-12">
       <h4 class="archive_item-title">
+        
         {% if publication.link %}
         <a href="{{publication.link}}">{{publication.title}}</a>
         {% elsif publication.pdf %}
@@ -39,5 +41,6 @@
       </div></p>
     </div>
   </div>
+  {% endif %}
   {% endfor %}
 </div>

@@ -4,6 +4,7 @@ categories: publications
 pdf : CSCW2019-ManyThoughts.pdf
 authors: John Joon Young Chung, Jean Young Song, Sindhu Kutty, Sungsoo (Ray) Hong, Juho Kim, Walter S. Lasecki
 venue : CSCW2019
+type : full
 bibtex: "@inproceedings{ChungCSCW2019Efficient,\n
 author = {John J.Y. Chung, Jean Y. Song, Sindhu Kutty, Sungsoo Hong, Juho Kim, and Walter S. Lasecki},
 title = {Accident Prevention with Predictive Instantaneous Crowdsourcing},
