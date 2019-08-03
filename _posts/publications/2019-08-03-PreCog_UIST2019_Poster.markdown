@@ -3,7 +3,7 @@ title: "Towards Instantaneous Recovery From Autonomous System Failures via Predi
 categories: publications
 pdf : UIST2019-PreCog.pdf
 authors: John Joon Young Chung, Fuhu Xiao, Nikola Banovic, Walter S. Lasecki
-venue : UIST2019
+venue : UIST2019 Poster
 type : poster
 bibtex: "@inproceedings{ChungUIST2019Towards,\n
 author = {John J.Y. Chung, Fuhu Xiao, Nikola Banovic, and Walter S. Lasecki},
