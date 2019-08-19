@@ -7,7 +7,7 @@ venue : CSCW2019
 type : full
 bibtex: "@inproceedings{ChungCSCW2019Efficient,\n
 author = {John J.Y. Chung, Jean Y. Song, Sindhu Kutty, Sungsoo Hong, Juho Kim, and Walter S. Lasecki},
-title = {Accident Prevention with Predictive Instantaneous Crowdsourcing},
+title = {Efficient Elicitation Approaches to Estimate Collective Crowd Answers},
 journal={Proceedings of the ACM on Human-Computer Interaction},
 number={CSCW},
 year = {2019},
