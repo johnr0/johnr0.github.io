@@ -1,7 +1,7 @@
 ---
 title: "Towards Instantaneous Recovery From Autonomous System Failures via Predictive Crowdsourcing"
 categories: publications
-pdf : UIST2019-PreCog.pdf
+pdf : UIST2019-Poster-PreCog.pdf
 authors: John Joon Young Chung, Fuhu Xiao, Nikola Banovic, Walter S. Lasecki
 venue : UIST2019 Poster
 type : poster
