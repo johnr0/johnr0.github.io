@@ -33,11 +33,14 @@ I also enjoy video games, ranging from AAA games to experimental indie games, an
 <h3 class="archive__subtitle"><a href="{{domain}}/research/">Recent Publications</a></h3>
 
 {% for publication in site.categories.publications %}
+{% if publication.type=="full" %}
 <div class="row">
 
 <div class="col-xs-12">
   <h4 class="archive_item-title"><a href="{{domain}}/assets/publications/{{publication.pdf}}/">{{publication.title}}</a></h4>
-  <h5>{{publication.authors}} - {{publication.venue}}</h5>
+  <h5>{{publication.authors}} </h5>
+  <h5>{{publication.venue}}</h5>
 </div>
 </div>
+{% endif %}
 {% endfor %}
