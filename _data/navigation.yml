@@ -1,7 +1,5 @@
 # main links
 main:
-   - title: "Current Research"
-     url: /research/
    - title: "Publications"
      url: /publications/
    - title: "Game"
