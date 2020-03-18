@@ -2,11 +2,11 @@
 title: "C-Reference: Improving 2D to 3D Object Pose EstimationAccuracy via Crowdsourced Joint Object Estimation"
 categories: publications
 pdf :
-authors: Jean Young Song, John Joon Young Chung, Davide Fouhey, Walter S. Lasecki
+authors: Jean Young Song, John Joon Young Chung, Davide F. Fouhey, Walter S. Lasecki
 venue : CSCW2020
 type : full
 bibtex: "@inproceedings{song2020creference,
- author = {Song, Jean Y. and Chung ,John J.Y. and Fouhey, David and Lasecki, Walter S.},
+ author = {Song, Jean Y. and Chung ,John J.Y. and Fouhey, David F. and Lasecki, Walter S.},
  title = {C-Reference: Improving 2D to 3D Object Pose EstimationAccuracy via Crowdsourced Joint Object Estimation},
  booktitle={Proceedings of the ACM conference on Computer-Supported Collaborative Work (CSCW '20)},
  year = {2020},
