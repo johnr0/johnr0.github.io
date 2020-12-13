@@ -1,0 +1,10 @@
+---
+title: "Beyond Show of Hands: Engaging Viewers via Expressive and Scalable Visual Communication in Live Streaming (to appear)"
+categories: publications
+pdf : CHI2021-Beyond-Show-of-Hands.pdf
+authors: John Joon Young Chung, Hijung Valentina Shin, Haijun Xia, Li-yi Wei, Rubaiat Habib Kazi
+venue : CHI2021
+type : full
+tags:
+  - live streaming, user engagement, sketching, visualization
+---
