@@ -6,6 +6,7 @@ image: 2019_manythoughts.png
 authors: John Joon Young Chung, Jean Young Song, Sindhu Kutty, Sungsoo (Ray) Hong, Juho Kim, Walter S. Lasecki
 venue : CSCW2019
 type : full
+blog: https://medium.com/acm-cscw/efficient-elicitation-approaches-to-estimate-collective-crowd-answers-bd4c9adddb18
 awards : Honorable Mention
 bibtex: "@inproceedings{chung2019efficient,
  author = {Chung ,John J.Y. and Song, Jean Y. and Kutty, Sindhu and Hong, Sungsoo Ray and Kim, Juho and Lasecki, Walter S.},
