@@ -7,9 +7,9 @@
   <h3>Full paper</h3>
   {% for publication in site.categories.publications %}
   {% if publication.type=='full' %}
-  <div class="row">
+  <div class="row" style='margin-bottom: 10px'>
     <div class="col-xs-3">
-      <img src="{{"/assets/image/research/"}}{{publication.image}}"/>
+      <img src="{{"/assets/image/research/"}}{{publication.image}}" style='max-height:150px; margin: auto; display: block'></img>
     </div>
     <div class="col-xs-9">
       <h4 class="archive_item-title">
