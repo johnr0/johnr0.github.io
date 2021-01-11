@@ -2,6 +2,7 @@
 title: "C-Reference: Improving 2D to 3D Object Pose Estimation Accuracy via Crowdsourced Joint Object Estimation"
 categories: publications
 pdf : CSCW2020-C-Reference.pdf
+image: 2020_c-ref.png
 authors: Jean Young Song, John Joon Young Chung, Davide F. Fouhey, Walter S. Lasecki
 venue : CSCW2020
 type : full

@@ -8,7 +8,10 @@
   {% for publication in site.categories.publications %}
   {% if publication.type=='full' %}
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-3">
+      <img src="{{"/assets/image/research/"}}{{publication.image}}"/>
+    </div>
+    <div class="col-xs-9">
       <h4 class="archive_item-title">
         
         {% if publication.link %}

@@ -2,6 +2,7 @@
 title: "Personalizing Ambience and Illusionary Presence: How People Use “Study with Me” Videos to Create Effective Studying Environments (to appear)"
 categories: publications
 pdf : CHI2021-SWM.pdf
+image: 2021_swm.JPG
 authors: Yoonjoo Lee, John Joon Young Chung, Jean Y Song, Minsuk Chang, Juho Kim
 venue : CHI2021
 type : full
