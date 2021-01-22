@@ -1,5 +1,5 @@
 ---
-title: "Beyond Show of Hands: Engaging Viewers via Expressive and Scalable Visual Communication in Live Streaming (to appear)"
+title: "Beyond Show of Hands: Engaging Viewers via Expressive and Scalable Visual Communication in Live Streaming"
 categories: publications
 pdf : CHI2021-Beyond-Show-of-Hands.pdf
 image: 2021_vispoll.png

@@ -3,7 +3,7 @@ title: "Efficient Elicitation Approaches to Estimate Collective Crowd Answers"
 categories: publications
 pdf : CSCW2019-Full-ManyThoughts.pdf
 image: 2019_manythoughts.png
-authors: John Joon Young Chung, Jean Young Song, Sindhu Kutty, Sungsoo (Ray) Hong, Juho Kim, Walter S. Lasecki
+authors: John Joon Young Chung, Jean Y. Song, Sindhu Kutty, Sungsoo (Ray) Hong, Juho Kim, Walter S. Lasecki
 venue : CSCW2019
 type : full
 blog: https://medium.com/acm-cscw/efficient-elicitation-approaches-to-estimate-collective-crowd-answers-bd4c9adddb18
