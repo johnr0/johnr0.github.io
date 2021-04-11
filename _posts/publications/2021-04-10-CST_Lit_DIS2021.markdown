@@ -1,0 +1,11 @@
+---
+title: "The Intersection of Users, Roles, Interactions, and Technologies in CreativitySupport Tools (to appear)"
+categories: publications
+pdf : DIS2021-CST-Lit-Review.pdf
+authors: John Joon Young Chung, Shiqing He, Eytan Adar
+image: 2021_CST_lit.png
+venue : DIS2021
+type : full
+tags:
+  - creativity support tools, art-making, literature review
+---
