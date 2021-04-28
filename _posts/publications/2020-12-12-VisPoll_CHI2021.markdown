@@ -50,21 +50,22 @@ For example, in physics live streaming, if a streamer asks viewers to annotate n
 
 With these visual attributes, VIMF allows streamers to *specify*, *aggregate*, and *visualize* viewer visual inputs according to visual attributes, so that they can manage and sensemake on scalable viewer visual inputs. 
 
-
+#### Specify
 ![blog_img4](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img4.png)
 
 First, VIMF allows streamers to ***specify*** visual inputs. Streamers can decide which visual attributes will be allowed for viewers to control. For example, in the above example of physics live streaming, the streamer can only allow viewers to make arrow-shaped inputs. At the same time, the streamer can allow full freedom in the length, position, and direction of the arrow. With this, streamers can specify a necessary level of expressiveness for viewer inputs. Accordingly, the streamer would receive a more coherent set of inputs. At the same time, streamers can allow easy visual inputs if viewers do not have enough knowledge or skills to answer with highly expressive visual inputs. 
 
 
+#### Aggregate
 ![blog_img5](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img5.png)
 
 Second, VIMF allows streamers to ***aggregate*** visual inputs. Streamers can run aggregation with visual attributes that the streamers think as important. For example, in the above example, the streamer can aggregate viewer inputs with the size (length) and the rotation (direction) of arrows. As the result of the aggregation, a VIMF-based system outputs several clusters with different sizes and rotations. 
 
 
+#### Visualize
 ![blog_img6](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img6.png)
 
 Third, VIMF allows streamers to ***visualize*** viewer visual inputs. Streamers can show aggregated results in an easy-to-understand visualization that embeds upon the streaming video. For example, in the above example, the streamer can show each aggregated cluster into each arrow, with the width of arrows indicating the number of people who answered so. 
-
 
 With VIMF, we designed an initial system for expressive and scalable viewer visual communication, VisPoll. VisPoll focuses on visual attributes on a single, static object, which include position, shape, size, rotation, and color. It is also designed with turn-based interaction, allowing streamers to specify when viewers can submit inputs and when to show collected viewer inputs. It allows streamers to more easily manage viewer inputs. Moreover, VisPoll allows streamers to save and load configurations about visual input specifications, aggregations, and visualization so that they can flexibly use visual communications during the streaming. 
 
