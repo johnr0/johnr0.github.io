@@ -102,4 +102,5 @@ One computer science lecturer asked viewers to solve sorting questions and give 
 
 We found streamers and viewers found VisPoll helpful in understanding the overall inputs from viewers. They also mentioned that they could more engage in the streaming with active participation in the streaming. 
 
+### To Conclude...
 We hope VIMF and VisPoll open up new possibilities in allowing scalable and expressive multi-modal viewer visual interactions. We believe our work can be extended to enable scalable, collective, but sensible construction of visual inputs---such as free drawings or even animations. It would open up more interesting and engaging viewer-streamer interactions in live streamings. 
