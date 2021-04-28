@@ -7,7 +7,7 @@ video30: https://youtu.be/fYkaAMCSEB0
 authors: John Joon Young Chung, Hijung Valentina Shin, Haijun Xia, Li-yi Wei, Rubaiat Habib Kazi
 venue : CHI2021
 type : full
-blog: true
+blog: https://johnr0.github.io/publications/VisPoll_CHI2021/
 blog_img: 2021_vispoll
 tags:
   - live streaming, user engagement, sketching, visualization
