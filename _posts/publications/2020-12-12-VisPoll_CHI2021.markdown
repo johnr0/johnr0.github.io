@@ -17,14 +17,14 @@ tags:
 *[Beyond Show of Hands: Engaging Viewers via Expressive and Scalable Visual Communication in Live Streaming](https://johnr0.github.io/assets/publications/CHI2021-Beyond-Show-of-Hands.pdf) - John Joon Young Chung, Hijung Valentina Shin, Haijun Xia, Li-yi Wei, Rubaiat Habib Kazi*
 
 
-[blog_img1](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img1.png)
+![blog_img1](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img1.png)
 *Screenshot from streamer [MagicPart](https://www.twitch.tv/yagubu)*
 
 Live streaming is an online streaming media, where the streamer and viewers can communicate in real-time. Streamers can share videos from cameras or the screen of their computer, while viewers can react to the streaming content and participate. This viewer engagement has been considered an integral and enriching element of live streaming.
 
 While viewer participation has been mainly done with chat, some existing platforms and tools tried to allow visual inputs for viewers, as the live streaming videos are visual in itself. Potentially, visual inputs would allow more expressions and enable interaction like visual referencing. 
 
-[blog_img2](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img2.png)
+![blog_img2](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img2.png)
 
 However, one challenge is that visual inputs can be messy and overwhelming if many viewers contribute inputs together. Existing tools ease this overwhelm by only allowing simple visual inputs or narrow use cases, hence losing expressiveness and flexibility. With this challenge, our question was *how to enable **flexible and scalable viewer visual communication** in live streaming*. 
 
@@ -36,7 +36,7 @@ To answer this question, we first interviewed streamers to investigate the requi
 
 Based on these design goals, we introduce a design framework for building viewer visual communication systems, **VIMF** (visual input management framework). 
 
-[blog_img3](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img3.png)
+![blog_img3](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img3.png)
 
 VIMF considers viewer visual inputs as a combination of *visual attributes*, which are visual aspects that convey information, such as shape, size, color, rotation, and position. 
 
@@ -44,15 +44,15 @@ For example, in physics live streaming, if a streamer asks viewers to annotate n
 
 With these visual attributes, VIMF allows streamers to *specify*, *aggregate*, and *visualize* viewer visual inputs according to visual attributes, so that they can manage and sensemake on scalable viewer visual inputs. 
 
-[blog_img4](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img4.png)
+![blog_img4](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img4.png)
 
 First, VIMF allows streamers to ***specify*** visual inputs. Streamers can decide which visual attributes will be allowed for viewers to control. For example, in the above example of physics live streaming, the streamer can only allow viewers to make arrow-shaped inputs. At the same time, the streamer can allow full freedom in the length, position, and direction of the arrow. With this, streamers can specify a necessary level of expressiveness for viewer inputs. Accordingly, the streamer would receive a more coherent set of inputs. At the same time, streamers can allow easy visual inputs if viewers do not have enough knowledge or skills to answer with highly expressive visual inputs. 
 
-[blog_img5](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img5.png)
+![blog_img5](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img5.png)
 
 Second, VIMF allows streamers to ***aggregate*** visual inputs. Streamers can run aggregation with visual attributes that the streamers think as important. For example, in the above example, the streamer can aggregate viewer inputs with the size (length) and the rotation (direction) of arrows. As the result of the aggregation, a VIMF-based system outputs several clusters with different sizes and rotations. 
 
-[blog_img6](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img6.png)
+![blog_img6](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img6.png)
 
 Third, VIMF allows streamers to ***visualize*** viewer visual inputs. Streamers can show aggregated results in an easy-to-understand visualization that embeds upon the streaming video. For example, in the above example, the streamer can show each aggregated cluster into each arrow, with the width of arrows indicating the number of people who answered so. 
 
@@ -60,25 +60,25 @@ With VIMF, we designed an initial system for expressive and scalable viewer visu
 
 With VisPoll, we introduce a range of **application scenarios**. 
 
-[blog_img7](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img7.png)
+![blog_img7](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img7.png)
 
 In educational scenarios, streamers can ask questions to student viewers, like “how would electrolysis work on water” in chemistry streaming or “what the troop decided to do” in history streaming. Student viewers would answer these questions with expressive visual inputs, with diagramming-like interactions. Then, the streamer would visualize the aggregated answer, which would help the streamer and viewers to understand how the viewers answered. With this, the streamer would potentially identify misunderstandings within viewers. 
 
-[blog_img8](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img8.png)
+![blog_img8](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img8.png)
 
 In creative live streaming, VisPoll can be leveraged to get viewer opinions on how to create arts or to collect viewer feedback. By aggregating and visualizing viewer answers, the streamer can understand what the majority’s opinions are, and try to satisfy viewers. 
 
 We also ran user studies with 3 streamers and 43 viewers. Streamers could use VisPoll according to their live streaming contexts. 
 
-[blog_img9](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img9.png)
+![blog_img9](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img9.png)
 
 One creative live streamer could collect viewer opinions when deciding what to create. Viewers could place a marker on one of the options, and the streamer could understand what viewers chose by visualizing raw answers on the video. 
 
-[blog_img10](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img10.png)
+![blog_img10](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img10.png)
 
 One Korean language arts lecturer could prompt viewers to solve a grammar problem and give adaptive explanations based on how viewers answered. Viewers annotated clauses with boxes, with different colors indicating different roles of clauses. The streamer could visualize viewer inputs with the height of each cluster indicating the number of people who answered so. 
 
-[blog_img11](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img11.png)
+![blog_img11](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img11.png)
 
 One computer science lecturer asked viewers to solve sorting questions and give explanations based on viewer answers. Viewers could answer with different arrays of elements, and the streamer could visualize different arrays, with size indicating the number of people who answered so. 
 
