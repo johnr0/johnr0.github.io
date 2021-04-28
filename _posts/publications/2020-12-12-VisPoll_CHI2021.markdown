@@ -39,7 +39,7 @@ To answer this question, we first interviewed streamers to investigate the requi
 * G4. Adaptability: Allow streamers to adapt viewer interactions to the different content and changing context of live streaming.
 
 
-### Visual Input Management Framework and VisPoll
+### Visual Input Management Framework
 Based on these design goals, we introduce a design framework for building viewer visual communication systems, **VIMF** (visual input management framework). 
 
 ![blog_img3](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img3.png)
@@ -67,6 +67,7 @@ Second, VIMF allows streamers to ***aggregate*** visual inputs. Streamers can ru
 
 Third, VIMF allows streamers to ***visualize*** viewer visual inputs. Streamers can show aggregated results in an easy-to-understand visualization that embeds upon the streaming video. For example, in the above example, the streamer can show each aggregated cluster into each arrow, with the width of arrows indicating the number of people who answered so. 
 
+### VisPoll
 With VIMF, we designed an initial system for expressive and scalable viewer visual communication, VisPoll. VisPoll focuses on visual attributes on a single, static object, which include position, shape, size, rotation, and color. It is also designed with turn-based interaction, allowing streamers to specify when viewers can submit inputs and when to show collected viewer inputs. It allows streamers to more easily manage viewer inputs. Moreover, VisPoll allows streamers to save and load configurations about visual input specifications, aggregations, and visualization so that they can flexibly use visual communications during the streaming. 
 
 
