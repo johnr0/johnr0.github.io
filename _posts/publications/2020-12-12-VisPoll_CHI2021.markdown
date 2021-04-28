@@ -22,7 +22,7 @@ tags:
 
 
 ![blog_img1](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img1.png)
-*Screenshot from streamer [MagicPart](https://www.twitch.tv/yagubu)*
+*Screenshot from streamer [MagicPark](https://www.twitch.tv/yagubu)*
 
 Live streaming is an online streaming media, where the streamer and viewers can communicate in real-time. Streamers can share videos from cameras or the screen of their computer, while viewers can react to the streaming content and participate. This viewer engagement has been considered an integral and enriching element of live streaming.
 
