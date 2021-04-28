@@ -13,7 +13,7 @@ layout: publications_single
 tags:
   - live streaming, user engagement, sketching, visualization
 ---
-![blog_img0](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img0.gif){ width=100% }
+![blog_img0](https://johnr0.github.io/assets/image/research/blog/2021_vispoll/blog_img0.gif){:width="100%"}
 
 *This post summarizes a research paper, “[Beyond Show of Hands: Engaging Viewers via Expressive and Scalable Visual Communication in Live Streaming](https://johnr0.github.io/assets/publications/CHI2021-Beyond-Show-of-Hands.pdf)”, that introduces a framework and a system that enables scalable viewer visual communication in live streaming. This work is appearing at CHI2021.* 
 
