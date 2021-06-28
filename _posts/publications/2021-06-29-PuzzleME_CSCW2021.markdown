@@ -5,6 +5,7 @@ pdf : CSCW2021-PuzzleMe.pdf
 authors: April Wang, Yan Chen, John Joon Young Chung, Christopher Brooks, Steve Oney
 venue : CSCW2021
 type : full
-tags: peer assessment, live programming, synchronous code sharing
-  - 
+image: 2021_puzzleme.png
+tags: 
+  - peer assessment, live programming, synchronous code sharing
 ---
