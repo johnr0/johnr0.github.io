@@ -1,5 +1,5 @@
 ---
-title: "PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises (to appear)"
+title: "PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises"
 categories: publications
 pdf : CSCW2021-PuzzleME.pdf
 authors: April Wang, Yan Chen, John Joon Young Chung, Christopher Brooks, Steve Oney
