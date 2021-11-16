@@ -6,6 +6,23 @@ authors: April Wang, Yan Chen, John Joon Young Chung, Christopher Brooks, Steve 
 venue : CSCW2021
 type : full
 image: 2021_puzzleme.png
+bibtex: "@article{wang2021puzzleme,
+author = {Wang, April Yi and Chen, Yan and Chung, John Joon Young and Brooks, Christopher and Oney, Steve},
+title = {PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises},
+year = {2021},
+issue_date = {October 2021},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {5},
+number = {CSCW2},
+url = {https://doi.org/10.1145/3479559},
+doi = {10.1145/3479559},
+month = {oct},
+articleno = {415},
+numpages = {24},
+keywords = {synchronous code sharing, live programming, peer assessment}
+}"
+video: https://youtu.be/eiDqxW0pIKw
 tags: 
   - peer assessment, live programming, synchronous code sharing
 ---

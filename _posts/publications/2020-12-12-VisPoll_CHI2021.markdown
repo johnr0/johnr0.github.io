@@ -11,6 +11,18 @@ type : full
 blog: https://johnr0.github.io/publications/VisPoll_CHI2021/
 blog_img: 2021_vispoll
 layout: publications_single
+bibtex: "@inbook{chung2021beyond,
+author = {Chung, John Joon Young and Shin, Hijung Valentina and Xia, Haijun and Wei, Li-yi and Kazi, Rubaiat Habib},
+title = {Beyond Show of Hands: Engaging Viewers via Expressive and Scalable Visual Communication in Live Streaming},
+year = {2021},
+isbn = {9781450380966},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3411764.3445419},
+booktitle = {Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+articleno = {109},
+numpages = {14}
+}"
 tags:
   - live streaming, user engagement, sketching, visualization
 ---

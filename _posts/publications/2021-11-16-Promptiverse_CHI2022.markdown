@@ -7,5 +7,5 @@ image: 2022_promptiverse.png
 venue : CHI2022
 type : full
 tags:
-  - story writing, sketching, creativity support tool, story generation, controlled generation
+  - scaffolding prompt, knowledge graph, human-AI hybrid annotation
 ---
