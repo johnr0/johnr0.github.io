@@ -1,0 +1,11 @@
+---
+title: "FlatMagic: Improving Flat Colorization through AI-driven Design for DigitalComic Professionals (Conditionally accepted with minor revision)"
+categories: publications
+pdf : CHI2022-flatmagic.pdf
+authors: Chuan Yan, John Joon Young Chung, Kiheon Yoon, Yotam Gingold, Eytan Adar, Sungsoo Ray Hong
+image: 2022-flatmagic.png
+venue : CHI2022
+type : full
+tags:
+  - creativity support, system for professionals, webcomic, colorization, intermediate representation
+---
