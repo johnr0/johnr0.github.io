@@ -5,6 +5,8 @@ pdf : DIS2021-CST-Lit-Review.pdf
 authors: John Joon Young Chung, Shiqing He, Eytan Adar
 image: 2021_CST_lit.png
 venue : DIS2021
+video30: https://youtu.be/boEDM4Zzvlo
+video: https://youtu.be/tM9luc0n2Es
 type : full
 tags:
   - creativity support tools, art-making, literature review

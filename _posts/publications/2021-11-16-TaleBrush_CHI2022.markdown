@@ -1,0 +1,11 @@
+---
+title: "TaleBrush: Sketching Stories with Generative Pretrained Language Models (Conditionally accepted with minor revision)"
+categories: publications
+pdf : CHI2022-TaleBrush.pdf
+authors: John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, Minsuk Chang
+image: 2022_talebrush.gif
+venue : CHI2022
+type : full
+tags:
+  - story writing, sketching, creativity support tool, story generation, controlled generation
+---
