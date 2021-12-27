@@ -6,6 +6,14 @@ authors: John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Ada
 image: 2022_talebrush.gif
 venue : CHI2022
 type : full
+bibtex: "@inbook{chung2021talebrush,
+author = {Chung, John Joon Young and Kim, Wooseok and Yoo, Kang Min and Lee, Hwaran and Adar, Eytan and Chang, Minsuk},
+title = {TaleBrush: Sketching Stories with Generative Pretrained Language Models},
+year = {2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+booktitle = {Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems},
+}"
 tags:
   - story writing, sketching, creativity support tool, story generation, controlled generation
 ---
