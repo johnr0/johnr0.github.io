@@ -14,6 +14,9 @@
       {% elsif music.soundcloud %}
         {% include video id=music.soundcloud provider="soundcloud" %}
       {% endif %}
+      {% elsif music.img %}
+        <img src="{{"/assets/image/music/"}}{{music.img}}" style='width:100%;'></img>
+      {% endif %}
     </div>
     </div>
     <div class="col-xs-8">
