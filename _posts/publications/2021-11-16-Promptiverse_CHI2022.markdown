@@ -1,5 +1,5 @@
 ---
-title: "Promptiverse: Scalable Generation of Scaffolding Prompts through Human-AI Knowledge Graph Annotation (Conditionally accepted with minor revision)"
+title: "Promptiverse: Scalable Generation of Scaffolding Prompts through Human-AI Knowledge Graph Annotation"
 categories: publications
 pdf : CHI2022-Promptiverse.pdf
 authors: Yoonjoo Lee, John Joon Young Chung, Taesoo Kim, Jean Y. Song, Juho Kim
