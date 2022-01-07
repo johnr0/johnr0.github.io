@@ -22,7 +22,7 @@ tags:
 ![blog_img0](https://johnr0.github.io/assets/image/research/2022_talebrush.gif){:width="100%"}
 
 {:style="text-align: center"}
-John Joon Young Chung (University of Michigan), Wooseok Kim (KAIST), Kang Min Yoo (Naver AI LAB), Hwaran Lee (Naver AI LAB), Eytan Adar (University of Michigan), Minsuk Chang (Naver AI LAB)
+*John Joon Young Chung (University of Michigan), Wooseok Kim (KAIST), Kang Min Yoo (Naver AI LAB), Hwaran Lee (Naver AI LAB), Eytan Adar (University of Michigan), Minsuk Chang (Naver AI LAB)*
 
 {:style="text-align: justify"}
 ### Abstract
