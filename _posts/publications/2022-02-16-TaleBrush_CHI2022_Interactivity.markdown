@@ -3,7 +3,7 @@ title: "TaleBrush: Visual Sketching of Story Generation with Pretrained Language
 categories: publications
 pdf : 
 authors: John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, Minsuk Chang
-venue : CHI2022
+venue : CHI2022 Interactivity
 type : demo
 # bibtex: "@inbook{chung2022talebrush,
 # author = {Chung, John Joon Young and Kim, Wooseok and Yoo, Kang Min and Lee, Hwaran and Adar, Eytan and Chang, Minsuk},
