@@ -1,7 +1,7 @@
 ---
 title: "TaleBrush: Visual Sketching of Story Generation with Pretrained Language Models"
 categories: publications
-pdf : 
+pdf : CHI2022-TaleBrush-Interactivity.pdf
 authors: John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, Minsuk Chang
 venue : CHI2022 Interactivity
 type : demo
