@@ -49,7 +49,14 @@ While advanced text generation algorithms (e.g., GPT-3) have enabled writers to 
 
 ## Mike's story
 
-![tb1_1](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_1.png){:width="50%"}
-![tb1_2](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_2.png){:width="50%"}
-![tb1_3](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_3.png){:width="50%"}
-![tb1_4](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_4.png){:width="50%"}
+![tb1_1](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_1.png){:width="100%"}
+![tb1_2](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_2.png){:width="100%"}
+![tb1_3](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_3.png){:width="100%"}
+![tb1_4](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_4.png){:width="100%"}
+
+## Sheery's story
+
+![tb2_1](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb2_1.png){:width="100%"}
+![tb2_2](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb2_2.png){:width="100%"}
+![tb2_3](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb2_3.png){:width="100%"}
+![tb2_4](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb2_4.png){:width="100%"}
