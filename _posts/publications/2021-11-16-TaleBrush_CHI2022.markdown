@@ -45,3 +45,11 @@ While advanced text generation algorithms (e.g., GPT-3) have enabled writers to 
 </iframe>
 
 
+### Examples from TaleBrush
+
+## Mike's story
+
+![tb1_1](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_1.png){:width="50%"}
+![tb1_2](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_2.png){:width="50%"}
+![tb1_3](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_3.png){:width="50%"}
+![tb1_4](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_4.png){:width="50%"}
