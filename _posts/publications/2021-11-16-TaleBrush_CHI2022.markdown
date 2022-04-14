@@ -4,6 +4,7 @@ categories: publications
 pdf : CHI2022-TaleBrush.pdf
 authors: John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, Minsuk Chang
 image: 2022_talebrush.gif
+video: https://youtu.be/F_y6drm6af8 
 venue : CHI2022
 type : full
 bibtex: "@inbook{chung2021talebrush,
