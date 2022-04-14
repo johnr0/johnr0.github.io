@@ -41,6 +41,9 @@
         {% if publication.blog %}
         <a style="float:right; margin-left: 10px" href="{{publication.blog}}">Blog post</a>
         {% endif %}
+        {% if publication.project_page %}
+        <a style="float:right; margin-left: 10px" href="{{publication.project_page}}">Project page</a>
+        {% endif %}
         {% if publication.video30 %}
         <a href="{{publication.video30}}" style="float:right; margin-left: 10px">short video</a>
         {% endif %}
