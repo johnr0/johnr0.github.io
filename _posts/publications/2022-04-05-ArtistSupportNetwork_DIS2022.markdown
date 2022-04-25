@@ -1,7 +1,7 @@
 ---
-title: "Artist Support Networks: Implications for Future Creativity Support Tools (to appear, conditionally accepted)"
+title: "Artist Support Networks: Implications for Future Creativity Support Tools"
 categories: publications
-# pdf : DIS2021-CST-Lit-Review.pdf
+pdf : DIS2022-ArtistSupportNetworks.pdf
 authors: John Joon Young Chung, Shiqing He, Eytan Adar
 image: 2022_ArtistSupportNetwork.png
 venue : DIS2022

@@ -1,5 +1,5 @@
 ---
-title: "FlatMagic: Improving Flat Colorization through AI-driven Design for DigitalComic Professionals"
+title: "FlatMagic: Improving Flat Colorization through AI-driven Design for Digital Comic Professionals"
 categories: publications
 pdf : CHI2022-flatmagic.pdf
 authors: Chuan Yan, John Joon Young Chung, Kiheon Yoon, Yotam Gingold, Eytan Adar, Sungsoo Ray Hong
