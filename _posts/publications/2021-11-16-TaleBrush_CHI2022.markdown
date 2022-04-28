@@ -55,7 +55,7 @@ While advanced text generation algorithms (e.g., GPT-3) have enabled writers to 
 ![tb1_3](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_3.png){:width="100%"}
 ![tb1_4](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb1_4.png){:width="100%"}
 
-#### Sheery's story
+#### Sherry's story
 
 ![tb2_1](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb2_1.png){:width="100%"}
 ![tb2_2](https://johnr0.github.io/assets/image/research/blog/2022_talebrush/tb2_2.png){:width="100%"}
