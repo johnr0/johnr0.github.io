@@ -1,0 +1,29 @@
+---
+title: "Artistic User Expressions in AI-powered Creativity Support Tools"
+categories: publications
+pdf : UIST22-DC.pdf
+authors: John Joon Young Chung
+image: 2022_ArtistSupportNetwork.png
+venue : UIST2022
+# video30: https://youtu.be/boEDM4Zzvlo
+# video: https://youtu.be/tM9luc0n2Es
+type : doctoral symposium
+# bibtex: "@inproceedings{10.1145/3461778.3462050,
+# author = {Chung, John Joon Young and He, Shiqing and Adar, Eytan},
+# title = {The Intersection of Users, Roles, Interactions, and Technologies in Creativity Support Tools},
+# year = {2021},
+# isbn = {9781450384766},
+# publisher = {Association for Computing Machinery},
+# address = {New York, NY, USA},
+# url = {https://doi.org/10.1145/3461778.3462050},
+# doi = {10.1145/3461778.3462050},
+# booktitle = {Designing Interactive Systems Conference 2021},
+# pages = {1817–1833},
+# numpages = {17},
+# keywords = {creativity support tools, art-making, literature review},
+# location = {Virtual Event, USA},
+# series = {DIS '21}
+# }"
+tags:
+  - creativity support tools, art-making, generative AI
+---
