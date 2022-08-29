@@ -1,7 +1,7 @@
 ---
 title: "Artistic User Expressions in AI-powered Creativity Support Tools"
 categories: publications
-# pdf : UIST22-DC.pdf
+pdf : UIST22_John_DC.pdf
 authors: John Joon Young Chung
 venue : UIST2022 Doctoral Symposium
 # video30: https://youtu.be/boEDM4Zzvlo
