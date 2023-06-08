@@ -6,7 +6,7 @@ layout: archive
 <p>I am John Joon Young Chung, a fifth year Ph.D. student at University of Michigan, working with <a href='http://www.cond.org/'>Eytan Adar</a>. </p>
   <!-- My research area is focused on HCI, crowdsourcing, and AI.  -->
 <p>
-  I am interested in turning AI/ML models into useful tools for artists, by opening up diverse ways to interact with thesetechnologies.
+  I am interested in turning AI/ML models into useful tools for artists, by opening up diverse ways to interact with these technologies.
   <!-- As the vehicle for the research, I enjoy drawing ideas from various fields, including AI/ML, crowdsourcing, and psychology.   -->
 </p>
 
@@ -46,7 +46,14 @@ I also enjoy video games, ranging from AAA games to experimental indie games, an
     <img src="{{"/assets/image/research/"}}{{publication.image}}" style='max-height:100px; margin: auto; margin-top:10px; display: block'></img>
   </div>
 <div class="col-xs-10">
-  <h4 class="archive_item-title"><a href="{{domain}}/assets/publications/{{publication.pdf}}">{{publication.title}}</a></h4>
+  <h4 class="archive_item-title">
+    {% if publication.link %}
+      <a href="{{publication.link}}">{{publication.title}}</a>
+    {% elsif publication.pdf %}
+      <a href="{{domain}}/assets/publications/{{publication.pdf}}">{{publication.title}}</a>
+    {% else %}{{publication.title}}{% endif %}
+    
+  </h4>
   <h5>{{publication.authors}} </h5>
   <h5>{{publication.venue}}</h5>
 </div>
