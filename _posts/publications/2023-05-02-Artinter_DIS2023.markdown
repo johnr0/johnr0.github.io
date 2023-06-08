@@ -1,7 +1,7 @@
 ---
 title: "Artinter: AI-powered Boundary Objects for Commissioning Visual Arts"
 categories: publications
-# pdf : DIS2023-Artinter.pdf
+pdf : DIS2023-Artinter.pdf
 authors: John Joon Young Chung, Eytan Adar
 image: 2023_Artinter.png
 venue : DIS2023
