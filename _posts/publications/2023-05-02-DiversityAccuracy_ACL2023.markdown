@@ -2,6 +2,7 @@
 title: "Increasing Diversity While Maintaining Accuracy: Text Data Generation with Large Language Models and Human Interventions"
 categories: publications
 # pdf : DIS2023-Artinter.pdf
+link: https://arxiv.org/abs/2306.04140
 authors: John Joon Young Chung, Ece Kamar, Saleema Amershi
 image: 2023_DiversityAccuracy.png
 venue : ACL2023
