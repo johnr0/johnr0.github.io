@@ -1,5 +1,5 @@
 ---
-title: "PromptPaint: Steering Text-to-Image Generation Through Paint Medium-like Interactions"
+title: "PromptPaint: Steering Text-to-Image Generation Through Paint Medium-like Interactions (Conditionally Accepted)"
 categories: publications
 # pdf : DIS2023-Artinter.pdf
 # link: https://arxiv.org/abs/2306.04140
