@@ -5,26 +5,26 @@ pdf : DIS2023-Artinter.pdf
 authors: John Joon Young Chung, Eytan Adar
 image: 2023_Artinter.png
 venue : DIS2023
-# video30: https://youtu.be/boEDM4Zzvlo
+video30: https://youtu.be/xc04RE4EepA
 # video: https://youtu.be/tM9luc0n2Es
 type : full
-# bibtex: "@inproceedings{chung2022artist,
-# author = {Chung, John Joon Young and He, Shiqing and Adar, Eytan},
-# title = {Artist Support Networks: Implications for Future Creativity Support Tools},
-# year = {2022},
-# isbn = {9781450393584},
-# publisher = {Association for Computing Machinery},
-# address = {New York, NY, USA},
-# url = {https://doi.org/10.1145/3532106.3533505},
-# doi = {10.1145/3532106.3533505},
-# abstract = {The artist as a solitary genius does not reflect the reality of art-making. To enable art-making, artists are supported by many other people—subcontractors, collaborators, etc.—who collectively form an Artist’s Support Network. Through an interview of 14 artists, we map the space of relationship types, provided support, interactions, failures, and successes of human support relationships. Moreover, we identified the patterns by which these aspects relate to each other in different support relationships. As technologically-driven Creativity Support Tools (CSTs) emerge to augment and automate portions of the artist’s support network, the detail of these interactions becomes critical. Existing sites of collaboration in support networks invariably shape artists’ expectations. How a CST fits within existing interaction expectations will shape the design, the artist’s understanding, and ultimately, acceptance. With this lens, we reflect on how a CST’s design–and in particular, those support collaboration and AI-driven variants–will mesh with the artist’s support network.},
-# booktitle = {Designing Interactive Systems Conference},
-# pages = {232–246},
-# numpages = {15},
-# keywords = {creativity support tools, creativity support, art-making},
-# location = {Virtual Event, Australia},
-# series = {DIS '22}
-# }"
+bibtex: "@inproceedings{10.1145/3563657.3595961,
+author = {Chung, John Joon Young and Adar, Eytan},
+title = {Artinter: AI-Powered Boundary Objects for Commissioning Visual Arts},
+year = {2023},
+isbn = {9781450398930},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3563657.3595961},
+doi = {10.1145/3563657.3595961},
+abstract = {When commissioning visual art, clients and artists communicate to agree on what is to be created. This often requires bridging a language gap in how they conceive art. To arrive at a mutual understanding, they leverage boundary objects—organized language and artifact instances. However, building and working with such objects is hard due to their innate subjectivity and ambiguity. Moreover, acquiring artifact instances, such as references and sketches, requires effort. We introduce Artinter, an AI-powered commission-support system for sharing, concretizing, and expanding boundary objects. Artinter helps artists and clients develop a mutually understood ‘language’ by allowing them to define concepts with artifacts (e.g., what they mean by ‘happy’). The system provides two AI-powered approaches for expanding commission boundary objects: 1) guided search with user-defined concepts and 2) instance generation by mixing concepts and artifacts. Our studies identify how AI features can support commissions and reveal future directions for AI-powered collaborative art-making.},
+booktitle = {Proceedings of the 2023 ACM Designing Interactive Systems Conference},
+pages = {1997–2018},
+numpages = {22},
+keywords = {human-AI interaction, visual arts, collaboration, creativity support tool},
+location = {Pittsburgh, PA, USA},
+series = {DIS '23}
+}"
 tags:
   - visual arts, creativity support tool, human-AI interaction, collaboration
 ---

@@ -5,7 +5,7 @@ pdf : DIS2022-ArtistSupportNetworks.pdf
 authors: John Joon Young Chung, Shiqing He, Eytan Adar
 image: 2022_ArtistSupportNetwork.png
 venue : DIS2022
-# video30: https://youtu.be/boEDM4Zzvlo
+video30: https://youtu.be/uyQrzut16Ps
 # video: https://youtu.be/tM9luc0n2Es
 type : full
 bibtex: "@inproceedings{chung2022artist,
