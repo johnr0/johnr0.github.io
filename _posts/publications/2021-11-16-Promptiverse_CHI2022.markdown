@@ -14,6 +14,7 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 booktitle = {Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems}
 }"
+project_page: https://promptiverse.kixlab.org/
 tags:
   - scaffolding prompt, knowledge graph, human-AI hybrid annotation
 ---

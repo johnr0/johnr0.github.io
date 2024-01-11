@@ -6,7 +6,7 @@ pdf : UIST23-PromptPaint.pdf
 authors: John Joon Young Chung, Eytan Adar
 image: 2023_PromptPaint.gif
 venue : UIST2023
-# video30: https://youtu.be/boEDM4Zzvlo
+video30: https://youtu.be/3SPRsm213_I
 # video: https://youtu.be/tM9luc0n2Es
 type : full
 bibtex: "@inproceedings{chung2023promptpaint,
