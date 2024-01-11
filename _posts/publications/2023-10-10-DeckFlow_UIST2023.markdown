@@ -1,0 +1,29 @@
+---
+title: "DeckFlow: A Card Game Interface for Exploring Generative Model Flows"
+categories: publications
+pdf : UIST23-DeckFlow.pdf
+# link: https://arxiv.org/abs/2306.04140
+authors: Gregory Thomas Croisdale, John Joon Young Chung, Emily Huang, Gage Birchmeier, Xu Wang, Anhong Guo
+venue : UIST2023
+# video30: https://youtu.be/boEDM4Zzvlo
+# video: https://youtu.be/tM9luc0n2Es
+type : poster
+bibtex: "@inproceedings{croisdale2023deckflow,
+author = {Croisdale, Gregory Thomas and Chung, John Joon Young and Huang, Emily and Birchmeier, Gage and Wang, Xu and Guo, Anhong},
+title = {DeckFlow: A Card Game Interface for Exploring Generative Model Flows},
+year = {2023},
+isbn = {9798400700965},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3586182.3615821},
+doi = {10.1145/3586182.3615821},
+booktitle = {Adjunct Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology},
+articleno = {89},
+numpages = {3},
+keywords = {generative model, text-to-image generation, multimodal interaction},
+location = {<conf-loc>, <city>San Francisco</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+series = {UIST '23 Adjunct}
+}"
+tags:
+  - generative model, multimodal interaction, text-to-image generation
+---
