@@ -20,3 +20,4 @@ layout: publications_single
 project_page: https://creativeconnect.kixlab.org/
 tags:
   - creativity support tool, graphic design ideation, reference recombination, machine learning
+---

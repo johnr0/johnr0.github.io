@@ -19,3 +19,4 @@ layout: publications_single
 # project_page: https://johnr0.github.io/publications/TaleBrush_CHI2022/
 tags:
   - authorial control, creative language arts, creative writing, generative AI, large language models, scalable personalization
+---

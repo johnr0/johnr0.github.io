@@ -19,3 +19,4 @@ layout: publications_single
 # project_page: https://johnr0.github.io/publications/TaleBrush_CHI2022/
 tags:
   - writing assistants, writing support tools, artificial intelligence, design space
+---
