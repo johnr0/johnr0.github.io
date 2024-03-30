@@ -1,7 +1,7 @@
 ---
 title: "Find the Bot!: Gamifying Facial Emotion Recognition for Both Human Training and Machine Learning Data Collection"
 categories: publications
-# pdf : CHI2022-TaleBrush.pdf
+pdf : CHI2024-FindtheBot.pdf
 # link: https://arxiv.org/abs/2312.11949
 authors: Yeonsun Yang, Ahyeon Shin, Nayoung Kim, Huidam Woo, John Joon Young Chung, Jean Y. Song
 image: 2024_findthebot.png
