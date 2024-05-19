@@ -2,7 +2,7 @@
 title: "One vs. Many: Comprehending Accurate Information from Multiple Erroneous and Inconsistent AI Generations"
 categories: publications
 # pdf : CHI2022-TaleBrush.pdf
-# link: https://arxiv.org/abs/2403.00439
+link: https://arxiv.org/abs/2405.05581
 authors: Yoonjoo Lee, Kihoon Son, Tae Soo Kim, Jisu Kim, John Joon Young Chung, Eytan Adar, Juho Kim
 image: 2024_stupidtutor.png
 # video: https://youtu.be/F_y6drm6af8 
