@@ -37,32 +37,32 @@ I also used to build <a href="{{domain}}/game/">some games</a> with my friends.
 
 <div>{{publication.selected}} {{counter}} {{publication.type}}</div>
 {% if publication.type=="full"}
-{% if publication.selected or counter <6 %}
+  {% if publication.selected or counter <6 %}
 
-<div class="row">
-  <div class="col-xs-2">
-    <img src="{{"/assets/image/research/"}}{{publication.image}}" style='max-height:100px; margin: auto; margin-top:10px; display: block'></img>
+  <div class="row">
+    <div class="col-xs-2">
+      <img src="{{"/assets/image/research/"}}{{publication.image}}" style='max-height:100px; margin: auto; margin-top:10px; display: block'></img>
+    </div>
+  <div class="col-xs-10">
+    <h4 class="archive_item-title">
+      {% if publication.link %}
+        <a href="{{publication.link}}">{{publication.title}}</a>
+      {% elsif publication.pdf %}
+        <a href="{{domain}}/assets/publications/{{publication.pdf}}">{{publication.title}}</a>
+      {% else %}{{publication.title}}{% endif %}
+      
+    </h4>
+    <h5>{{publication.authors}} </h5>
+    <h5>{{publication.venue}}</h5>
   </div>
-<div class="col-xs-10">
-  <h4 class="archive_item-title">
-    {% if publication.link %}
-      <a href="{{publication.link}}">{{publication.title}}</a>
-    {% elsif publication.pdf %}
-      <a href="{{domain}}/assets/publications/{{publication.pdf}}">{{publication.title}}</a>
-    {% else %}{{publication.title}}{% endif %}
-    
-  </h4>
-  <h5>{{publication.authors}} </h5>
-  <h5>{{publication.venue}}</h5>
-</div>
-</div>
-{% unless publication.selected %}
-{% assign counter=counter | plus: 1 %}
-{% endunless %}
-{% endif %}
+  </div>
+  {% unless publication.selected %}
+  {% assign counter=counter | plus: 1 %}
+  {% endunless %}
+  {% endif %}
 {% endif %}
 {% endfor %}
-
+<!-- 
 {% if counter >= 6 %}
   <p><a href="{{domain}}/publications/">See more publications</a></p>
-{% endif %}
+{% endif %} -->
