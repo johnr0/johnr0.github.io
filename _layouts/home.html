@@ -35,8 +35,7 @@ I also used to build <a href="{{domain}}/game/">some games</a> with my friends.
 {% assign counter=0 %}
 {% for publication in site.categories.publications %}
 
-{% assign cur_full = publication.type=="full" and counter < 6%}
-{% if publication.selected or cur_full %}
+{% if publication.selected or publication.type=="full" and counter < 6 %}
 
 <div class="row">
   <div class="col-xs-2">
