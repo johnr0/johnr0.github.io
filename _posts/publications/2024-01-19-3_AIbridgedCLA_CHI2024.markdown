@@ -8,6 +8,7 @@ image: 2024_AIbridgedCLA.png
 # video: https://youtu.be/F_y6drm6af8 
 venue : CHI2024
 type : full
+selected: true
 awards : Honorable Mention
 # bibtex: "@inbook{chung2021talebrush,
 # author = {Chung, John Joon Young and Kim, Wooseok and Yoo, Kang Min and Lee, Hwaran and Adar, Eytan and Chang, Minsuk},

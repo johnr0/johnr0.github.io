@@ -9,6 +9,7 @@ venue : UIST2023
 video30: https://youtu.be/3SPRsm213_I
 # video: https://youtu.be/tM9luc0n2Es
 type : full
+selected: true
 bibtex: "@inproceedings{chung2023promptpaint,
 author = {Chung, John Joon Young and Adar, Eytan},
 title = {PromptPaint: Steering Text-to-Image Generation Through Paint Medium-like Interactions},

@@ -9,6 +9,7 @@ venue : ACL2023
 # video30: https://youtu.be/boEDM4Zzvlo
 # video: https://youtu.be/tM9luc0n2Es
 type : full
+selected: true
 bibtex: "@inproceedings{chung2023increasing,
     title = {Increasing Diversity While Maintaining Accuracy: Text Data Generation with Large Language Models and Human Interventions},
     author = {Chung, John  and
