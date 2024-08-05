@@ -36,7 +36,7 @@ I also used to build <a href="{{domain}}/game/">some games</a> with my friends.
 {% for publication in site.categories.publications %}
 
 
-{% if (publication.type=="full" and counter <6) or publication.selected %}
+{% if publication.selected or (publication.type=="full" and counter <6) %}
 
 <div class="row">
   <div class="col-xs-2">
@@ -55,6 +55,8 @@ I also used to build <a href="{{domain}}/game/">some games</a> with my friends.
   <h5>{{publication.venue}}</h5>
 </div>
 </div>
+{% if not publication.selected %}
 {% assign counter=counter | plus: 1 %}
+{% endif %}
 {% endif %}
 {% endfor %}
