@@ -1,7 +1,7 @@
 ---
 title: "ShadowMagic: Designing Human-AI Collaborative Support for Comic Professionals’ Shadowing"
 categories: publications
-# pdf : UIST24-Patchview.pdf
+pdf : UIST24-shadowmagic.pdf
 # link: https://arxiv.org/abs/2306.04140
 authors: Amrita Ganguly, Chuan Yan, John Joon Young Chung, Tong Steven Sun, Yoon Kiheon, Yotam Gingold, Sungsoo Ray Hong
 image: 2024_shadowmagic.png

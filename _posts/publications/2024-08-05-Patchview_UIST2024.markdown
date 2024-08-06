@@ -1,7 +1,7 @@
 ---
 title: "Patchview: LLM-Powered Worldbuilding with Generative Dust and Magnet Visualization"
 categories: publications
-# pdf : UIST24-Patchview.pdf
+pdf : UIST24-Patchview.pdf
 # link: https://arxiv.org/abs/2306.04140
 authors: John Joon Young Chung, Max Kreminski
 image: 2024_patchview.gif
