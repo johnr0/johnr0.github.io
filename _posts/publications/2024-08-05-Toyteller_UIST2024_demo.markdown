@@ -1,7 +1,7 @@
 ---
 title: "Toyteller: Toy-Playing with Character Symbols for AI-Powered Visual Storytelling"
 categories: publications
-# pdf : UIST24-Patchview.pdf
+pdf : UIST24-toyteller-demo.pdf
 # link: https://arxiv.org/abs/2306.04140
 authors: John Joon Young Chung, Melissa Roemmele, Max Kreminski
 # image: 2023_PromptPaint.gif
