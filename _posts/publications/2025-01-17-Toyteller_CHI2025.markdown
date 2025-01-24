@@ -2,10 +2,11 @@
 title: "Toyteller: AI-powered Visual Storytelling Through Toy-Playing with Character Symbols"
 categories: publications
 # pdf : CHI2022-TaleBrush.pdf
-# link: https://arxiv.org/abs/2403.00439
+link: https://arxiv.org/abs/2501.13284
 authors: John Joon Young Chung, Melissa Roemmele, Max Kreminski
 image: 2025_toyteller.gif
-# video: https://youtu.be/F_y6drm6af8 
+video: https://drive.google.com/file/d/1JSI-WqmDIwqrQggNkN3lW2brWgrTF8Vr/view?usp=sharing
+video30: https://drive.google.com/file/d/1QMXeya_TtoBqBrvPlZp2ST_Uw7sTJO-o/view?usp=sharing
 venue : CHI2025
 type : full
 selected: true

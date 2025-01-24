@@ -10,6 +10,7 @@ venue : UIST2024
 # video: https://youtu.be/tM9luc0n2Es
 type : full
 selected: true
+project_page: https://mj-storytelling.github.io/project/patchview
 bibtex: "@inproceedings{chung2024patchview,
 author = {Chung, John Joon Young and Kreminski, Max},
 title = {Patchview: LLM-powered Worldbuilding with Generative Dust and Magnet Visualization},
