@@ -8,6 +8,7 @@ image: 2025_fuzzy.png
 venue : C&C2025
 type : full
 selected: false
+awards : Honorable Mention
 # bibtex: "@inbook{chung2021talebrush,
 # author = {Chung, John Joon Young and Kim, Wooseok and Yoo, Kang Min and Lee, Hwaran and Adar, Eytan and Chang, Minsuk},
 # title = {TaleBrush: Sketching Stories with Generative Pretrained Language Models},
