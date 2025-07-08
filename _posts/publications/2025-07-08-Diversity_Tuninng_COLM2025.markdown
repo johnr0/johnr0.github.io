@@ -1,13 +1,13 @@
 ---
-title: "Phraselette: A Poet’s Procedural Palette"
+title: "Modifying Large Language Model Post-Training for Diverse Creative Writing"
 categories: publications
 # pdf : CHI2022-TaleBrush.pdf
-link: https://arxiv.org/abs/2503.06335
-authors: Alex Calderwood, John Joon Young Chung, Yuqian Sun, Melissa Roemmele, Max Kreminski
-image: 2025_phraselette.png
-venue : DIS2025
+link: https://arxiv.org/pdf/2503.17126
+authors: John Joon Young Chung, Vishakh Padmakumar, Melissa Roemmele, Yuqian Sun, Max Kreminski
+image: 2025_divtuning.png
+venue : COLM2025
 type : full
-selected: false
+selected: true
 # bibtex: "@inbook{chung2021talebrush,
 # author = {Chung, John Joon Young and Kim, Wooseok and Yoo, Kang Min and Lee, Hwaran and Adar, Eytan and Chang, Minsuk},
 # title = {TaleBrush: Sketching Stories with Generative Pretrained Language Models},
@@ -19,5 +19,5 @@ selected: false
 layout: publications_single
 # project_page: https://johnr0.github.io/publications/TaleBrush_CHI2022/
 tags:
-  - Creative Writing, Language Models, Poetry, Artistic Support Tool, CST, Material, Search
+  - Creative Writing, Language Models, Post Training, Diversity
 ---

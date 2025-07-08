@@ -3,7 +3,7 @@ title: "Fuzzy Linkography: Automatic Graphical Summarization of Creative Activit
 categories: publications
 # pdf : CHI2022-TaleBrush.pdf
 link: https://arxiv.org/abs/2502.04599
-authors: Amy Smith, Barret R. Anderson, Jasmine Tan Otto, Isaac Karth, Yuqian Sun, John Joon Young Chng, Melissa Roemmele, Max Kreminski
+authors: Amy Smith, Barret R. Anderson, Jasmine Tan Otto, Isaac Karth, Yuqian Sun, John Joon Young Chung, Melissa Roemmele, Max Kreminski
 image: 2025_fuzzy.png
 venue : C&C2025
 type : full
