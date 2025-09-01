@@ -1,7 +1,7 @@
 ---
 title: "Supporting Material Writing Practice with Phraselette, a Palette of Phrases"
 categories: publications
-# pdf : CHI2022-TaleBrush.pdf
+pdf : DIS2025-demo-phraselette.pdf
 # link: https://arxiv.org/abs/2503.06335
 authors: Alex Calderwood, John Joon Young Chung, Yuqian Sun, Melissa Roemmele, Max Kreminski
 # image: 2025_phraselette.png
