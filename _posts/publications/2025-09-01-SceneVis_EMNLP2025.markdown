@@ -2,7 +2,7 @@
 title: "LLMs Behind the Scenes: Enabling Narrative Scene Illustration"
 categories: publications
 # pdf : CHI2022-TaleBrush.pdf
-# link: https://arxiv.org/abs/2503.06335
+link: https://arxiv.org/pdf/2509.22940
 authors: Melissa Roemmele, John Joon Young Chung, Taewook Kim, Yuqian Sun, Alex Calderwood, Max Kreminski
 image: 2025_SceneVis.png
 venue : EMNLP2025
