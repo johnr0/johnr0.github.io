@@ -7,7 +7,7 @@ authors: Gregory Croisdale, Emily Huang, John Joon Young Chung, Anhong Guo, Xu W
 image: 2025_Deckflow.png
 venue : VL/HCC2025
 type : full
-selected: true
+selected: false
 # bibtex: "@inbook{chung2021talebrush,
 # author = {Chung, John Joon Young and Kim, Wooseok and Yoo, Kang Min and Lee, Hwaran and Adar, Eytan and Chang, Minsuk},
 # title = {TaleBrush: Sketching Stories with Generative Pretrained Language Models},
