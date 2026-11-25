@@ -1,4 +1,378 @@
----
-layout: home
-author_profile: true
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Joon Young Chung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #c8c5c1; --fg: #34303a; --dim: #5f5a63; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--fg); overflow: hidden; }
+  body { font: 13px/1.6 "IBM Plex Mono", ui-monospace, monospace; }
+  canvas#world { position: fixed; inset: 0; width: 100vw; height: 100vh; touch-action: none; cursor: crosshair; }
+  .card {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: min(520px, calc(100vw - 32px)); padding: 28px 32px; pointer-events: none;
+    background: rgba(240, 237, 233, 0.1); 
+    backdrop-filter: blur(6px) saturate(1.1); -webkit-backdrop-filter: blur(6px) saturate(1.1);
+    /* box-shadow: 0 10px 40px rgb(52, 48, 58); */
+  }
+  /* .card::before { content: ""; position: absolute; inset: -70px -110px -110px -70px; z-index: -1; background: radial-gradient(closest-side, #ebe8e4f2 65%, #ebe8e400); } */
+  .card a { pointer-events: auto; color: var(--fg); text-decoration: none; border-bottom: 1px solid #3d334055; }
+  .card a:hover { border-bottom-color: var(--fg); }
+  h1 { font-size: 15px; font-weight: 500; letter-spacing: .02em; }
+  .card p { color: var(--fg); margin-top: 8px; }
+  .contact { margin-top: 10px; color: var(--dim); font-size: 12px; }
+  nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .hint { margin-top: 14px; color: var(--dim); font-size: 11px; transition: opacity 1.5s; }
+  @media (max-width: 600px) { .card { padding: 22px 20px; } }
+</style>
+</head>
+<body>
+<canvas id="world"></canvas>
+<div class="card">
+  <h1>John Joon Young Chung</h1>
+  <p>I am a research scientist at <a href="https://www.midjourney.com/">Midjourney</a>. <br/>My current research focuses on aesthetic text modeling. <br/> Previously, I was involved in <a href="https://mj-storytelling.github.io/">Midjourney Storytelling Lab</a>, exploring interactions and techniques for AI-powered storytelling. <br/> I hold a Ph.D. at the <a href="https://www.umich.edu/">University of Michigan</a>.</p>
+  <nav>
+    <a href="https://scholar.google.com/citations?user=ZHdXUCMAAAAJ">Scholar</a>
+    <a href="assets/cv/cv.pdf">CV</a>
+    <a href="https://www.instagram.com/johnr0/">Instagram</a>
+    <a href="https://x.com/john_jyc">X</a>
+    <a href="https://www.linkedin.com/in/john-chung-b68a921a7/">LinkedIn</a>
+  </nav>
+  <div class="contact">Contact: johnr0hol at gmail</div>
+  <!-- <div class="hint" id="hint">move across the sand · hold to pour</div> -->
+</div>
+
+<script id="frag" type="x-shader/x-fragment">#version 300 es
+precision highp float;
+precision highp int;
+// Coloured sand, drawn per screen pixel on the GPU.
+// The surface is a single dull grey sand. Beneath it lie wavy bands of pastel colours,
+// each slowly drifting in hue; passing over a
+// band brings its whole stratum to the surface (and drags the sand along a little), and
+// pouring adds new sand that the flow
+// carries away. Revealed bands sink back and poured sand dissolves into the surface colour,
+// so left alone, the world returns to one colour. The sand is a lit surface with soft folds,
+// swells roll through it like ocean waves, and grains glide with sub-pixel smoothness.
+uniform vec2 uRes;        // canvas size, device px
+uniform float uScale;     // device px per grain
+uniform float uTime;
+uniform vec3 uAmp;        // current height of each swell (they breathe, arriving in sets)
+uniform vec3 uDom;        // the surface sand (0..255)
+uniform vec2 uSpan;       // grains covered by one repeat of the pour texture
+uniform vec2 uBands;      // reveal texture covers band values [x, x + y)
+uniform sampler2D uReveal; // r: how far each band (by band value) has surfaced
+uniform sampler2D uPour;   // rgb: poured colour premultiplied by amount (0..1), a: amount
+uniform sampler2D uPush;   // cursor smear over the screen, in grains
+out vec4 outColor;
+
+const float TAU = 6.28318531;
+const float DRIFT = 0.3;      // grains per time unit, to the right
+const float BAND = 34.0;      // grains per colour band
+const float BLEND = 0.55;     // width of the speckled transition between bands
+const float STRAY = 0.025;    // share of revealed grains that are a random other colour
+const float HINT = 0.008;     // share of surface grains that show what's underneath
+const float SPARKLE = 1.0 / 240.0;
+const float FOLD = 4.2;       // fold height, grains
+const float LIFT = 1.6;       // a surfaced band rises a little, grains
+const float MOUND = 7.0;      // poured mound height, grains
+const vec3 LIGHT = vec3(-0.55, -0.6, 0.58) / 0.9850;
+const float HUE_DRIFT = 0.0045; // how fast each band's colour wanders around the wheel (0 freezes it)
+
+float hashi(ivec2 q) {
+  uvec2 u = uvec2(q);
+  uint h = u.x * 1597334677u ^ u.y * 3812015801u;
+  h ^= h >> 16; h *= 0x7feb352du; h ^= h >> 15; h *= 0x846ca68bu; h ^= h >> 16;
+  return float(h) * (1.0 / 4294967295.0);
+}
+float vnoise(vec2 p) {
+  vec2 i = floor(p), f = fract(p), u = f * f * (3.0 - 2.0 * f);
+  ivec2 q = ivec2(i);
+  return mix(mix(hashi(q), hashi(q + ivec2(1, 0)), u.x), mix(hashi(q + ivec2(0, 1)), hashi(q + ivec2(1, 1)), u.x), u.y);
+}
+
+// one ocean swell: points circle forward/back (d) and up/down (h) as it passes
+void swell(vec2 p, vec2 dir, float L, float T, float Q, float A, float A0, inout vec2 d, inout float h) {
+  float k = TAU / L, th = k * dot(dir, p) - TAU * uTime / T;
+  d += dir * cos(th) * Q / k * (A / A0);
+  h += A * sin(th);
+}
+
+vec3 hsl(float h, float s, float l) {
+  vec3 k = mod(vec3(0.0, 8.0, 4.0) + h * 12.0, 12.0);
+  return l - s * min(l, 1.0 - l) * max(vec3(-1.0), min(min(k - 3.0, 9.0 - k), vec3(1.0)));
+}
+// each band has its own pastel, drifting in hue at its own pace and direction
+vec3 bandColor(int idx) {
+  float a = hashi(ivec2(idx, 911)), b = hashi(ivec2(idx, 1337)), c = hashi(ivec2(idx, 4242));
+  float hue = fract(a + uTime * HUE_DRIFT * (0.6 + 0.8 * b) * (c < 0.5 ? 1.0 : -1.0));
+  return hsl(hue, 0.18 + 0.42 * b, 0.79 + 0.08 * c) * 255.0;
+}
+
+float revealAt(float b) { return texture(uReveal, vec2((b - uBands.x) / uBands.y, 0.5)).r; }
+
+// returns (band value, surface height, sand coordinate x, sand coordinate y)
+vec4 field(vec2 p) {
+  float t = uTime;
+  vec2 d = vec2(0.0); float hw = 0.0;
+  swell(p, normalize(vec2(1.0, 0.28)), 380.0, 360.0, 0.5, uAmp.x, 7.0, d, hw);
+  swell(p, normalize(vec2(0.94, -0.34)), 220.0, 250.0, 0.4, uAmp.y, 3.5, d, hw);
+  swell(p, normalize(vec2(1.0, 0.05)), 120.0, 160.0, 0.3, uAmp.z, 1.4, d, hw);
+  vec2 s = p - vec2(DRIFT * t, 0.0) - d - texture(uPush, p * uScale / uRes).xy;
+  vec2 w = s + vec2(90.0, 120.0) * 2.0 * (vec2(vnoise(s * 0.0021 + vec2(0.0, t * 0.0005)),
+                                              vnoise(s * 0.0018 + vec2(31.0, t * 0.0004))) - 0.5);
+  w.y += 34.0 * sin(s.x * 0.016 + vnoise(vec2(s.y * 0.006 + t * 0.0003, 7.0)) * 5.0);
+  float b = w.y / BAND + vnoise(w * vec2(0.004, 0.003)) * 1.6;
+  float pour = texture(uPour, s / uSpan).a;
+  float h = FOLD * cos(b * TAU * 0.5) * (0.6 + 0.4 * vnoise(w * 0.005 + 70.0)) + hw
+          + smoothstep(0.0, 1.0, revealAt(b)) * LIFT + pour * MOUND;
+  return vec4(b, h, s);
+}
+
+// one grain: surface sand, unless its band has surfaced or sand was poured here
+vec4 grain(ivec2 q, float b, float reveal, vec4 pour) {
+  float h1 = hashi(q), h2 = hashi(q + ivec2(7777, 0)), jit = hashi(q + ivec2(0, 4999)), h3 = hashi(q + ivec2(1234, 77));
+  vec3 c;
+  if (pour.a > 0.03 && h3 < smoothstep(0.03, 0.45, pour.a))          // poured sand
+    c = clamp(pour.rgb / pour.a, 0.0, 1.0) * 255.0;
+  else if (h3 < reveal || h1 < HINT) {                              // the bands beneath
+    float base = floor(b), f = b - base;
+    float edge = clamp((f - (1.0 - BLEND)) / BLEND, 0.0, 1.0);
+    int idx = int(base) + (hashi(q + ivec2(31, 9)) < edge ? 1 : 0);
+    if (h2 < STRAY) idx += 1 + int(h2 / STRAY * 12.0);
+    c = bandColor(idx);
+  } else c = uDom;                                                  // the single surface sand
+  return vec4(c * (0.94 + jit * 0.12), h2 > 1.0 - SPARKLE ? 1.0 : 0.0);
+}
+
+void main() {
+  vec2 p = vec2(gl_FragCoord.x, uRes.y - gl_FragCoord.y) / uScale;   // grain units, y down
+  vec4 F = field(p);
+  float hx = field(p + vec2(1.0, 0.0)).y - F.y, hy = field(p + vec2(0.0, 1.0)).y - F.y;
+  vec3 n = normalize(vec3(-hx, -hy, 1.0));
+  float shade = 0.7 + 0.45 * max(0.0, dot(n, LIGHT)) - max(0.0, -F.y) * 0.012;
+
+  float reveal = smoothstep(0.05, 0.85, revealAt(F.x));
+  vec4 pour = texture(uPour, F.zw / uSpan);
+
+  // grains sit at whole sand coordinates; blend the four nearest with a one-device-pixel
+  // edge, so grains stay crisp but glide smoothly
+  vec2 g = F.zw - 0.5, i = floor(g), fr = clamp((fract(g) - 0.5) * uScale + 0.5, 0.0, 1.0);
+  ivec2 q = ivec2(i);
+  vec4 c = mix(mix(grain(q, F.x, reveal, pour), grain(q + ivec2(1, 0), F.x, reveal, pour), fr.x),
+               mix(grain(q + ivec2(0, 1), F.x, reveal, pour), grain(q + ivec2(1, 1), F.x, reveal, pour), fr.x), fr.y);
+
+  vec3 col = c.rgb * shade;
+  col += vec3(18.0, 4.0, 14.0) * max(0.0, 1.0 - shade);   // shadows lean warm-mauve, not grey
+  col = mix(col, vec3(255.0, 253.0, 250.0), c.a);
+  outColor = vec4(min(col, vec3(255.0)) / 255.0, 1.0);
+}
+</script>
+
+<script>
+(() => {
+  const SPEED = 0.2;           // time scale for all ambient motion (drift, swirls, waves)
+  const CELL = 2;              // css px per grain
+  const TEX = 3;               // grains per pour texel
+  const DRIFT = 0.3, BAND = 34;            // must match the shader
+  const AMPS = [7, 3.5, 1.4];  // swell heights, grains
+  const BANDS = [-12, 64], BANDS_RES = 2048;   // band values the reveal texture covers, and its resolution
+  const REVEAL_WIDTH = 0.42;   // how wide a surfaced strip is, in bands
+  const REVEAL_FADE = 20;      // seconds for a surfaced band to mostly sink back
+  const POUR_FADE = 30;        // seconds for poured sand to mostly dissolve
+  const PUSH = 4;              // grains per smear texel
+  const SMEAR = 1.2;           // how much the cursor drags the sand
+  const SMEAR_RELAX = 3;       // seconds for a smear to mostly relax back
+  const hex = c => [1, 3, 5].map(k => parseInt(c.slice(k, k + 2), 16));
+  const SURFACE = hex('#c8c5c1');   // dull grey
+  const POURS = ['#b9a0dc', '#9ed9b8', '#f0937f', '#8fbde8', '#f2d27a', '#e28d9e', '#7cc6c6'].map(hex);
+
+  const cvs = document.getElementById('world');
+  const hint = document.getElementById('hint');
+  const gl = cvs.getContext('webgl2', { antialias: false });
+  if (!gl) return; // no WebGL2: the page keeps its plain sand-coloured background
+
+  // ---- shader setup: one full-screen triangle
+  function compile(type, src) {
+    const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, compile(gl.VERTEX_SHADER, '#version 300 es\nin vec2 a; void main() { gl_Position = vec4(a, 0.0, 1.0); }'));
+  gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, document.getElementById('frag').textContent));
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+  gl.useProgram(prog);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const aLoc = gl.getAttribLocation(prog, 'a');
+  gl.enableVertexAttribArray(aLoc); gl.vertexAttribPointer(aLoc, 2, gl.FLOAT, false, 0, 0);
+  const U = n => gl.getUniformLocation(prog, n);
+  const uRes = U('uRes'), uScale = U('uScale'), uTime = U('uTime'), uAmp = U('uAmp'), uSpan = U('uSpan');
+  gl.uniform3f(U('uDom'), ...SURFACE);
+  gl.uniform2f(U('uBands'), BANDS[0], BANDS[1]);
+  gl.uniform1i(U('uReveal'), 0); gl.uniform1i(U('uPour'), 1); gl.uniform1i(U('uPush'), 2);
+
+  function makeTex(unit, wrap) {
+    const t = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, t);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, wrap);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, wrap);
+    return t;
+  }
+  // reveal: one value per band value (a strip of the band field); pour: laid out in sand coordinates
+  // push: the cursor smear, laid out over the screen
+  makeTex(0, gl.CLAMP_TO_EDGE); makeTex(1, gl.REPEAT); makeTex(2, gl.CLAMP_TO_EDGE);
+  const reveal = new Float32Array(BANDS_RES);
+  let TW, TH, pour, PW, PH, push, revealLive = true, pourLive = false, pushLive = false;
+
+  function resize() {
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    cvs.width = Math.round(innerWidth * dpr); cvs.height = Math.round(innerHeight * dpr);
+    gl.viewport(0, 0, cvs.width, cvs.height);
+    gl.uniform2f(uRes, cvs.width, cvs.height);
+    gl.uniform1f(uScale, CELL * dpr);
+    TW = Math.ceil(innerWidth / CELL / TEX) + 8; TH = Math.ceil(innerHeight / CELL / TEX) + 8;
+    gl.uniform2f(uSpan, TW * TEX, TH * TEX);
+    pour = new Float32Array(TW * TH * 4);
+    PW = Math.ceil(innerWidth / CELL / PUSH); PH = Math.ceil(innerHeight / CELL / PUSH);
+    push = new Float32Array(PW * PH * 2);
+    upload(true);
+  }
+  function upload(force) {
+    if (force || revealLive) { gl.activeTexture(gl.TEXTURE0); gl.texImage2D(gl.TEXTURE_2D, 0, gl.R16F, BANDS_RES, 1, 0, gl.RED, gl.FLOAT, reveal); }
+    if (force || pourLive) { gl.activeTexture(gl.TEXTURE1); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA16F, TW, TH, 0, gl.RGBA, gl.FLOAT, pour); }
+    if (force || pushLive) { gl.activeTexture(gl.TEXTURE2); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RG16F, PW, PH, 0, gl.RG, gl.FLOAT, push); }
+  }
+
+  // ---- the shader's field, mirrored in JS so we know which band is under the cursor
+  function hashi(x, y) {
+    let h = (Math.imul(x | 0, 1597334677) ^ Math.imul(y | 0, 3812015801 | 0)) >>> 0;
+    h ^= h >>> 16; h = Math.imul(h, 0x7feb352d) >>> 0; h ^= h >>> 15; h = Math.imul(h, 0x846ca68b | 0) >>> 0; h ^= h >>> 16;
+    return (h >>> 0) / 4294967295;   // XOR leaves a signed int in JS; read it back as unsigned like the shader
+  }
+  function vnoise(x, y) {
+    const ix = Math.floor(x), iy = Math.floor(y), fx = x - ix, fy = y - iy;
+    const ux = fx * fx * (3 - 2 * fx), uy = fy * fy * (3 - 2 * fy);
+    const a = hashi(ix, iy), b = hashi(ix + 1, iy), c = hashi(ix, iy + 1), d = hashi(ix + 1, iy + 1);
+    return (a + (b - a) * ux) * (1 - uy) + (c + (d - c) * ux) * uy;
+  }
+  let t = 0, amp = AMPS.slice();
+  const SW = [[1, 0.28, 380, 360, 0.5], [0.94, -0.34, 220, 250, 0.4], [1, 0.05, 120, 160, 0.3]]
+    .map(([dx, dy, L, T, Q]) => { const n = Math.hypot(dx, dy); return [dx / n, dy / n, L, T, Q]; });
+  function sandAt(px, py) {
+    let dx = 0, dy = 0;
+    SW.forEach(([ux, uy, L, T, Q], i) => {
+      const k = 6.28318531 / L, th = k * (ux * px + uy * py) - 6.28318531 * t / T;
+      const c = Math.cos(th) * Q / k * (amp[i] / AMPS[i]);
+      dx += ux * c; dy += uy * c;
+    });
+    const [mx, my] = pushAt(px, py);
+    return [px - DRIFT * t - dx - mx, py - dy - my];
+  }
+  // the smear at a screen point (grains), sampled like the GPU's linear filter
+  function pushAt(px, py) {
+    const fx = Math.min(PW - 1, Math.max(0, px / PUSH - 0.5)), fy = Math.min(PH - 1, Math.max(0, py / PUSH - 0.5));
+    const x0 = Math.floor(fx), y0 = Math.floor(fy), x1 = Math.min(PW - 1, x0 + 1), y1 = Math.min(PH - 1, y0 + 1), tx = fx - x0, ty = fy - y0;
+    const at = (x, y, c) => push[(y * PW + x) * 2 + c];
+    return [0, 1].map(c => (at(x0, y0, c) * (1 - tx) + at(x1, y0, c) * tx) * (1 - ty) + (at(x0, y1, c) * (1 - tx) + at(x1, y1, c) * tx) * ty);
+  }
+  // the cursor drags the sand along its motion, softly, around where it passes
+  function smear(px, py, vx, vy) {
+    const R = 14 * 4 / PUSH;   // radius in texels (~56 grains)
+    const cx = px / PUSH - 0.5, cy = py / PUSH - 0.5;
+    for (let y = Math.max(0, Math.floor(cy - R)); y <= Math.min(PH - 1, Math.ceil(cy + R)); y++)
+      for (let x = Math.max(0, Math.floor(cx - R)); x <= Math.min(PW - 1, Math.ceil(cx + R)); x++) {
+        const d2 = ((x - cx) ** 2 + (y - cy) ** 2) / (R * R);
+        if (d2 > 1) continue;
+        const f = (1 - d2) ** 2 * SMEAR, k = (y * PW + x) * 2;
+        push[k] += vx * f; push[k + 1] += vy * f;
+      }
+    pushLive = true;
+  }
+  function bandAt(px, py) {
+    const [sx, sy] = sandAt(px, py);
+    const wx = sx + 180 * (vnoise(sx * 0.0021, sy * 0.0021 + t * 0.0005) - 0.5);
+    let wy = sy + 240 * (vnoise(sx * 0.0018 + 31, sy * 0.0018 + t * 0.0004) - 0.5);
+    wy += 34 * Math.sin(sx * 0.016 + vnoise(sy * 0.006 + t * 0.0003, 7) * 5);
+    return wy / BAND + vnoise(wx * 0.004, wy * 0.003) * 1.6;
+  }
+
+  // surface the strip of band field around band value b; more movement, more colour
+  function surface(b, k) {
+    const c = (b - BANDS[0]) / BANDS[1] * BANDS_RES, r = REVEAL_WIDTH / BANDS[1] * BANDS_RES, R = Math.ceil(r * 2.5);
+    for (let i = Math.max(0, Math.floor(c - R)); i <= Math.min(BANDS_RES - 1, Math.ceil(c + R)); i++) {
+      const d = (i + 0.5 - c) / r;
+      reveal[i] = Math.min(1, reveal[i] + k * Math.exp(-d * d));
+    }
+    revealLive = true;
+  }
+
+  // pour: fresh sand piles up under the cursor
+  function pourAt(px, py, col) {
+    const [sx, sy] = sandAt(px, py), cx = sx / TEX, cy = sy / TEX, r = 4.5, R = Math.ceil(r * 2.2);
+    for (let oy = -R; oy <= R; oy++) for (let ox = -R; ox <= R; ox++) {
+      const x = Math.floor(cx) + ox, y = Math.floor(cy) + oy, d = Math.hypot(x + 0.5 - cx, y + 0.5 - cy) / r;
+      if (d > 2.2) continue;
+      const j = (((y % TH) + TH) % TH * TW + ((x % TW) + TW) % TW) * 4;
+      const a = Math.min(1, pour[j + 3] + Math.exp(-d * d * 1.2) * 0.12), grow = a - pour[j + 3];
+      pour[j] += col[0] / 255 * grow; pour[j + 1] += col[1] / 255 * grow; pour[j + 2] += col[2] / 255 * grow; pour[j + 3] = a;
+    }
+    pourLive = true;
+  }
+
+  // surfaced bands sink back and poured sand dissolves into the surface
+  function settle(dt) {
+    const kr = Math.exp(-dt / (REVEAL_FADE / 3)), kp = Math.exp(-dt / (POUR_FADE / 3));
+    if (revealLive) { let any = false; for (let i = 0; i < reveal.length; i++) { reveal[i] *= kr; if (reveal[i] > 0.003) any = true; else reveal[i] = 0; } if (!any) { upload(); revealLive = false; } }
+    if (pourLive) { let any = false; for (let i = 0; i < pour.length; i++) { pour[i] *= kp; if (pour[i] > 0.003) any = true; else pour[i] = 0; } if (!any) { upload(); pourLive = false; } }
+    if (pushLive) { const km = Math.exp(-dt / (SMEAR_RELAX / 3)); let any = false; for (let i = 0; i < push.length; i++) { push[i] *= km; if (Math.abs(push[i]) > 0.01) any = true; else push[i] = 0; } if (!any) { upload(); pushLive = false; } }
+  }
+
+  // ---- input
+  const mouse = { x: 0, y: 0, on: false, down: false, col: POURS[0] };
+  cvs.addEventListener('pointermove', e => {
+    const x = e.clientX / CELL, y = e.clientY / CELL;
+    if (mouse.on && !mouse.down) {
+      const dx = x - mouse.x, dy = y - mouse.y, sp = Math.hypot(dx, dy), steps = Math.max(1, Math.ceil(sp / 3));
+      for (let s = 1; s <= steps; s++) surface(bandAt(mouse.x + dx * s / steps, mouse.y + dy * s / steps), Math.min(0.15, sp * 0.01) / steps * 3);
+      smear(x, y, Math.max(-8, Math.min(8, dx)), Math.max(-8, Math.min(8, dy)));
+      if (sp > 1 && hint) hint.style.opacity = 0;
+    }
+    mouse.x = x; mouse.y = y; mouse.on = true;
+  });
+  cvs.addEventListener('pointerdown', e => {
+    mouse.down = true; mouse.x = e.clientX / CELL; mouse.y = e.clientY / CELL; mouse.on = true;
+    mouse.col = POURS[Math.floor(Math.random() * POURS.length)];
+    if (hint) hint.style.opacity = 0;
+  });
+  addEventListener('pointerup', () => mouse.down = false);
+  cvs.addEventListener('pointerleave', () => { mouse.on = false; mouse.down = false; });
+  addEventListener('resize', () => { clearTimeout(resize.t); resize.t = setTimeout(resize, 100); });
+
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let last = performance.now();
+  resize();
+  function loop(now) {
+    const dt = Math.min(0.1, Math.max(0, now - last) / 1000); last = now;
+    if (!reduced) t += SPEED * dt * 60;   // frame-rate independent
+    amp = AMPS.map((a, i) => a * (0.55 + 0.45 * Math.sin(t * 0.0021 + i * 2.1)));
+    if (mouse.down) pourAt(mouse.x, mouse.y, mouse.col);
+    settle(dt);
+    upload(false);
+    gl.uniform1f(uTime, t);
+    gl.uniform3f(uAmp, ...amp);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
